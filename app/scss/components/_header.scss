@@ -1,3 +1,41 @@
 .header {
-    
+    background-color: $gray-100;
+    @include adaptiv-value("padding", 20, 15, 0);
+
+    &__navigation {
+        display: flex;
+        align-items: center;
+
+        &>*:not(:last-child) {
+            margin-right: 20px;
+        }
+    }
+
+    &__catalog,
+    &__call {
+        margin-left: auto;
+    }
+
+    &__catalog {
+        position: relative;
+        @include burger;
+        margin-right: 20px;
+    }
+
+    &__line {
+        height: 20px;
+        margin-right: 13px;
+    }
+
+    &__call {
+        display: flex;
+        flex-direction: column;
+        font-weight: $fw-500;
+        font-size: 18px;
+    }
+
+    &__phone {
+        margin-bottom: 3px;
+        color: $blue-400;
+    }
 }

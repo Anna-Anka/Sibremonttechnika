@@ -1,37 +1,38 @@
 body {
-	color: $dark-800;
-	font-weight: $fw-400;
-	font-size: 16px;
+    color: $dark-800;
+    font-weight: $fw-400;
+    font-size: 16px;
     font-family: $roboto, Arial, sans-serif;
-	line-height: 1.5;
-	background-color: $white;
+    line-height: 1.5;
+    background-color: $white;
 }
 
 .container {
-	max-width: 1234px;
-	margin: 0 auto;
-	padding: 0 15px;
+    max-width: 1234px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
 .wrapper {
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
-	overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
 }
 
 .main {
-	flex: 1 1 auto;
+    flex: 1 1 auto;
 }
 
 .lock {
-	overflow: hidden;
+    overflow: hidden;
 }
 
 .button {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px;
     color: $white;
     font-weight: $fw-500;
     font-family: $oswald;
@@ -47,16 +48,16 @@ body {
 }
 
 .sr-only {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	padding: 0;
-	overflow: hidden;
-	white-space: nowrap;
-	border: 0;
-	clip: rect(0 0 0 0);
-	clip-path: inset(100%);
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
 }
 
 .section {
@@ -85,4 +86,84 @@ body {
 .subtitle {
     font-weight: $fw-500;
     font-size: 20px;
+}
+
+.logo {
+    display: inline-block;
+    transition: box-shadow 0.3s, opacity 0.5s;
+
+    &:focus {
+        box-shadow: 0 0 0 2px $blue-400;
+    }
+
+    &:hover {
+        opacity: 0.3;
+    }
+
+    &:active {
+        opacity: 0.5;
+    }
+
+    &__img {
+        max-width: 184px;
+        height: 88px;
+        object-fit: cover;
+
+        @include mq('tablet-2') {
+            max-width: 174px;
+        }
+
+        @include mq('tablet') {
+            max-width: 130px;
+            height: 62px;
+        }
+    }
+}
+
+.search-form {
+    display: flex;
+    width: 100%;
+    max-width: 443px;
+
+    &__field {
+        width: 100%;
+        padding: 12px;
+        line-height: 1.3;
+        border: 2px solid $gray-600;
+        border-right: none;
+        transition: border-color 0.4s;
+
+        &::placeholder {
+            color: $gray-600;
+            transition: color 0.3s;
+        }
+
+        &:focus {
+            border-color: $blue-400;
+        }
+
+        &:hover {
+            &::placeholder {
+                color: $dark-800;
+            }
+        }
+    }
+
+    &__button {
+        position: relative;
+        min-width: 48px;
+        padding: 0;
+
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 24px;
+            height: 24px;
+            background-image: url('../img/icons/search.svg');
+            transform: translate(-50%, -50%);
+            content: "";
+            @include background;
+        }
+    }
 }
