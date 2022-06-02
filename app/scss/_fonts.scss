@@ -1,0 +1,19 @@
+@mixin font-face($font-family, $url, $weight) {
+    @font-face {
+        font-family: "#{$font-family}";
+        src: url('../fonts/#{$url}.woff2') format("woff2"),
+        url('../fonts/#{$url}.woff') format("woff");
+        font-weight: #{$weight};
+        font-display: swap;
+        font-style: normal;
+    }
+}
+
+//Roboto
+@include font-face(Roboto, Roboto-Regular, 400);
+@include font-face(Roboto, Roboto-Medium, 500);
+
+//Oswald 
+@include font-face(Oswald, Oswald-Medium, 500);
+@include font-face(Oswald, Oswald-SemiBold, 600);
+@include font-face(Oswald, Oswald-Bold, 700);
