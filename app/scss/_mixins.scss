@@ -112,13 +112,12 @@ $maxWidthContainer: 1234;
 
 //////////////////////////////////////////////////////////////
 
+//Бургер
 @mixin burger {
     $burgerWidth: 32px;
     $burgerHeight: 2px;
     $burgerLineHeight: 2px;
     $burgerColor: $white;
-
-
 
     .header__line {
         position: relative;
@@ -149,25 +148,57 @@ $maxWidthContainer: 1234;
         &::after {
             bottom: -10px;
         }
+
+        &--active {
+            background-color: transparent;
+            transition: background-color 0.2s ease-in-out;
+
+            &::before {
+                transform: rotate(45deg);
+                top: 50%;
+                transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+                opacity: 1;
+            }
+
+            &::after {
+                transform: rotate(-45deg);
+                top: 50%;
+                transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+//////////////////////////////////////////////////////////////
+
+//Ссылки
+@mixin link {
+    position: relative;
+    padding-top: 2px;
+    transition: opacity 0.3s, box-shadow 0.3s;
+
+    &::before {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 2px;
+        background-color: $blue-400;
+        bottom: 0;
+        transition: width 0.4s;
     }
 
+    &:focus {
+        box-shadow: 0 0 0 2px $blue-400;
+    }
 
-    &--active {
-        .burger__line {
-            transform: scale(0);
-            transition: transform 0.3s ease-in-out;
-        }
-
+    &:hover {
         &::before {
-            transform: rotate(45deg);
-            top: 50%;
-            transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+            width: 100%;
         }
+    }
 
-        &::after {
-            transform: rotate(-45deg);
-            top: 50%;
-            transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
-        }
+    &:active {
+        opacity: 0.3;
     }
 }
