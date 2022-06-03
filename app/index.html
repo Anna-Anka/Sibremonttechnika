@@ -33,17 +33,30 @@
                     <span class="header__line"></span>
                     Каталог
                 </button>
+                <button class="header__mobile header__mobile--search" type="button">
+                    <span class="sr-only">
+                        Открыть поиск
+                    </span>
+                </button>
                 <form class="header__form search-form" action="#">
-                    <label class="sr-only" for="search">
-                        Поиск по товарам
-                    </label>
-                    <input class="search-form__field form__field" type="search" name="search" id="search" placeholder="Поиск по товарам" required>
+                    <div class="search-form__item">
+                        <label class="sr-only" for="search">
+                            Поиск по товарам
+                        </label>
+                        <input class="search-form__field form__field" type="search" name="search" id="search" placeholder="Поиск по товарам" required>
+                    </div>
                     <button class="search-form__button button" type="submit">
                         <span class="sr-only">
                             Найти
                         </span>
                     </button>
                 </form>
+
+                <button class="header__mobile header__mobile--call" button="button">
+                    <span class="sr-only">
+                        Связаться с нами
+                    </span>
+                </button>
                 <div class="header__call">
                     <a class="header__phone" href="tel:+7(383)3054070">
                         +7 383 305 40 70

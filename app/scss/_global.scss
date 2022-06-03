@@ -154,7 +154,26 @@ body {
 .search-form {
     display: flex;
     width: 100%;
-    max-width: 443px;
+    @include adaptiv-value("max-width", 443, 250, 0);
+
+    @include mq('tablet-2') {
+        display: none;
+        width: auto;
+    }
+
+    &--active {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        width: 100%;
+        max-width: 320px;
+        transform: translateY(100%);
+    }
+
+    &__item {
+        width: 100%;
+    }
 
     &__field {
         border-right: none;

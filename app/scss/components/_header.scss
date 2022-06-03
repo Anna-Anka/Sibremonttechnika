@@ -1,6 +1,6 @@
 .header {
-    background-color: $gray-100;
     padding: 0;
+    background-color: $gray-100;
     @include adaptiv-value("padding-top", 20, 15, 0);
 
     &__wrapper {
@@ -8,7 +8,7 @@
         align-items: center;
 
         &>*:not(:last-child) {
-            margin-right: 20px;
+            @include adaptiv-value("margin-right", 20, 15, 0);
         }
     }
 
@@ -24,10 +24,10 @@
 
     &__catalog {
         position: relative;
-        @include burger;
         margin-right: 20px;
         box-shadow: inset 0 0 $blue-400;
         transition: box-shadow 0.3s;
+        @include burger;
 
         &:focus {
             box-shadow: inset 12em 0 $dark-800, 0 0 0 2px $blue-400;
@@ -43,9 +43,65 @@
         margin-right: 13px;
     }
 
+    &__mobile {
+        position: relative;
+        display: none;
+        width: 40px;
+        height: 40px;
+        transition: box-shadow 0.3s, opacity 0.3s;
+
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 24px;
+            height: 24px;
+            transform: translate(-50%, -50%);
+            content: "";
+            @include background;
+        }
+
+        &:focus {
+            box-shadow: 0 0 0 2px $blue-400;
+        }
+
+        &:active {
+            opacity: 0.4;
+        }
+
+        &--search {
+
+            @include mq('tablet-2') {
+                display: block;
+            }
+
+            &::before {
+                background-image: url('../img/icons/search.svg');
+                filter: invert(93%) sepia(1%) saturate(5195%) hue-rotate(350deg) brightness(116%) contrast(79%);
+            }
+        }
+
+        &--call {
+
+            @include mq('phone-2') {
+                display: block;
+            }
+
+            &::before {
+                width: 32px;
+                height: 32px;
+                background-image: url('../img/icons/call.svg');
+            }
+        }
+    }
+
     &__button,
     &__phone {
         @include link;
+
+        @include mq('tablet') {
+            font-size: 16px;
+        }
     }
 
     &__call {
@@ -53,6 +109,20 @@
         flex-direction: column;
         font-weight: $fw-500;
         font-size: 18px;
+
+        @include mq('phone-2') {
+            display: none;
+        }
+
+        &--active {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            padding: 10px;
+            background-color: $white;
+            transform: translateY(100%);
+        }
     }
 
     &__phone {
