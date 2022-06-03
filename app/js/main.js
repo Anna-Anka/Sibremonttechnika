@@ -5,6 +5,10 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector('.modal').classList.add('modal--active');
     };
 
+    document.querySelector('.offer__button').onclick = function () {
+        document.querySelector('.modal').classList.add('modal--active');
+    };
+
     document.querySelector('.modal__close').onclick = function () {
         document.querySelector('.modal').classList.remove('modal--active');
     };
@@ -89,13 +93,6 @@ document.addEventListener("DOMContentLoaded", () => {
             toggleCall();
         }
     });
-
-
-
-
-
-
-
 });
 
 

@@ -1,6 +1,7 @@
 .modal {
     visibility: hidden;
     opacity: 0;
+    position: absolute;
 
     &__content {
         position: relative;
