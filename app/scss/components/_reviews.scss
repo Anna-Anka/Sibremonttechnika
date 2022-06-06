@@ -1,0 +1,200 @@
+.reviews {
+    &__list {
+
+        @include mq('phone-2') {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 20px;
+        background-color: $gray-100;
+    }
+
+    &__wrapper {
+        position: relative;
+    }
+
+    .swiper {
+        position: static;
+    }
+
+    .swiper-slide {
+        height: unset;
+    }
+
+    &__button {
+        width: 80px;
+        height: 80px;
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: cover;
+        mask-image: url('../img/icons/setting.svg');
+        background-color: $blue-400;
+        transition: box-shadow 0.3s, background-color 0.3s, opacity 0.3s;
+
+        @include mq('tablet-2') {
+            top: -35px;
+            transform: translateY(-50%);
+        }
+
+        @include mq('phone-2') {
+            display: none;
+        }
+
+        &:focus {
+            box-shadow: 0 0 0 2px $blue-400;
+        }
+
+        &:hover {
+            background-color: $dark-800;
+        }
+
+        &:active {
+            opacity: 0.3;
+        }
+
+        &::after {
+            display: none;
+        }
+
+        &--prev  {
+            @include adaptiv-value("left", -110, 10, 0);
+            
+            @include mq('tablet-2') {
+                right: 85px;
+                left: unset;
+            }
+
+            &::before {
+                background-image: url('../img/icons/arrow-left.svg');
+            }
+        }
+
+        &--next {
+            @include adaptiv-value("right", -110, 10, 0);
+
+            @include mq('tablet-2') {
+                right: 0;
+            }
+
+            &::before {
+                background-image: url('../img/icons/arrow-right.svg');
+            }
+        }
+
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 32px;
+            height: 32px;
+            transform: translate(-50%, -50%);
+            content: "";
+            @include background;
+        }
+    }
+
+    .swiper-button-disabled {
+        background-color: $gray-150;
+
+        &::before {
+            filter: invert(57%) sepia(6%) saturate(301%) hue-rotate(163deg) brightness(95%) contrast(88%);
+        }
+    }
+
+    .swiper-pagination {
+        position: static;
+        display: none;
+
+        @include mq('phone-2') {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    .swiper-pagination-bullet {
+        width: 24px;
+        height: 24px;
+        background-color: transparent;
+        background-image: url('../img/icons/setting.svg');
+        transition: opacity 0.3s, box-shadow 0.3s;
+        @include background;
+
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+
+        &:focus {
+            box-shadow: 0 0 0 2px $blue-400;
+        }
+
+        &:active {
+            opacity: 0.3;
+        }
+    }
+}
+
+.reviews-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__rating,
+    &__title,
+    &__link {
+        margin-bottom: 15px;
+    }
+
+    &__rating {
+        display: flex;
+    }
+
+    &__star {
+        @include background;
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+
+        &:not(:last-child) {
+            margin-right: 5px;
+        }
+    }
+    
+    &__text {
+        margin-bottom: 10px;
+        p {
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        color: $blue-400;
+        @include link;
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        margin-top: auto;
+    }
+
+    &__content {
+        margin-bottom: auto;
+    }
+
+    &__name {
+        margin-right: 10px;
+    }
+
+    &__date {
+        color: $gray-600;
+    }
+}

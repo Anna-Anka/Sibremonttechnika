@@ -3,13 +3,14 @@
 @import 'reset';
 
 @import 'mixins';
-/*@import 'libs'; */
+@import 'libs';
 @import 'global';
 
 //Components
 @import 'components/header';
 @import 'components/footer';
 @import 'components/modal';
+@import 'components/reviews';
 
 //Home
 @import 'home/offer';

@@ -51,6 +51,11 @@
 
     &__link {
         font-weight: $fw-500;
+        @include link;
+
+        &::before {
+            background-color: $white;
+        }
 
         &--confi {
             display: block;
@@ -60,6 +65,7 @@
     }
 
     &__button {
+        transition: box-shadow 0.3s, opacity 0.3s, color 0.3s;
         @include mq('tablet-2') {
             order: 1;
         }
@@ -71,6 +77,19 @@
         @include mq('phone-2') {
             width: 100%;
             margin-bottom: 20px;
+        }
+
+        &:focus,
+        &:hover {
+            color: $blue-400;
+        }
+
+        &:focus {
+            box-shadow: inset 12em 0 $white, 0 0 0 2px $blue-400;
+        }
+
+        &:hover {
+            box-shadow: inset 12em 0 $white;
         }
     }
 

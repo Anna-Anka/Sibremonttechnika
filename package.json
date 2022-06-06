@@ -28,6 +28,7 @@
         "ion-rangeslider": "^2.3.1",
         "jquery": "^3.6.0",
         "jquery-form-styler": "^2.0.2",
+        "jsuites": "^4.13.3",
         "mixitup": "^3.3.1",
         "rateyo": "^2.3.2",
         "sass": "^1.52.2",
@@ -38,7 +39,8 @@
         "stylelint-config-standard": "^23.0.0",
         "stylelint-order": "^5.0.0",
         "stylelint-prettier": "^2.0.0",
-        "stylelint-scss": "^4.0.0"
+        "stylelint-scss": "^4.0.0",
+        "swiper": "^8.2.2"
     },
     "dependencies": {
         "@fancyapps/fancybox": "^3.5.7",

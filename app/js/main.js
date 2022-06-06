@@ -9,6 +9,11 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector('.modal').classList.add('modal--active');
     };
 
+    document.querySelector('.footer__button').onclick = function () {
+        document.querySelector('.modal').classList.add('modal--active');
+    };
+
+
     document.querySelector('.modal__close').onclick = function () {
         document.querySelector('.modal').classList.remove('modal--active');
     };
@@ -93,18 +98,51 @@ document.addEventListener("DOMContentLoaded", () => {
             toggleCall();
         }
     });
+
+    //Слайдер в отзывах
+    const swiper = new Swiper('.swiper', {
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+
+        breakpoints: {    
+            993: {
+                slidesPerView: 3,
+                slidesPerGroup: 3,
+                spaceBetween: 20,
+            },
+
+            768: {
+                slidesPerView: 2,
+                slidesPerGroup: 2,
+                spaceBetween: 20,
+            },
+
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 1,
+                spaceBetween: 20,
+            },
+        },
+    });
 });
 
 
-    // const mediaQuery = window.matchMedia('(max-width: 992px)')
+// const mediaQuery = window.matchMedia('(max-width: 992px)')
 
-    // function handleTabletChange(e) {
-    //     if (e.matches) {
-    //         document.querySelector('.search-form__button').onclick = function () {
-    //             document.querySelector('.search-form__item').classList.toggle('search-form__item--active');
-    //         };
-    //     };
-    // };
+// function handleTabletChange(e) {
+//     if (e.matches) {
+//         document.querySelector('.search-form__button').onclick = function () {
+//             document.querySelector('.search-form__item').classList.toggle('search-form__item--active');
+//         };
+//     };
+// };
 
-    // mediaQuery.addListener(handleTabletChange)
-    // handleTabletChange(mediaQuery)
+// mediaQuery.addListener(handleTabletChange)
+// handleTabletChange(mediaQuery)
