@@ -61,7 +61,9 @@ body {
 }
 
 .section {
-    padding: 100px 0;
+    // padding: 100px 0;
+    @include adaptiv-value("padding-top", 100, 60, 0);
+    @include adaptiv-value("padding-bottom", 100, 60, 0);
 }
 
 .title,
@@ -72,14 +74,16 @@ body {
 }
 
 .title {
-    margin-bottom: 40px;
-    padding: 10px 0 10px 11px;
+    padding: 10px 0;
     font-weight: $fw-700;
-    font-size: 34px;
+    @include adaptiv-value("margin-bottom", 40, 30, 0); 
+    @include adaptiv-value("font-size", 34, 30, 0);
 
     &__accent {
         color: $white;
         background-color: $dark-800;
+        padding-left: 9px;
+        margin-right: 5px;
     }
 }
 

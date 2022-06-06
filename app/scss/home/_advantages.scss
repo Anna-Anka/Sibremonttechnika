@@ -1,0 +1,38 @@
+.advantages {
+    &__list {
+        width: 100%;
+        max-width: 1000px;
+        margin-bottom: -15px;
+        margin-left: auto;
+        column-count: 2;
+        column-gap: 20;
+
+        @include mq('tablet') {
+            column-count: 1;
+        }
+    }
+
+    &__item {
+        position: relative;
+        width: 100%;
+        max-width: 490px;
+        margin-bottom: 15px;
+        padding-left: 25px;
+        font-size: 18px;
+
+        &::before {
+            position: absolute;
+            top: 1px;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            background-image: url('../img/icons/setting.svg');
+            content: "";
+            @include background;
+        }
+
+        @include mq('tablet') {
+            max-width: 100%;
+        }
+    }
+}
