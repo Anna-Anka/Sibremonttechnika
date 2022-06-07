@@ -1,0 +1,107 @@
+.services {
+    background-color: $gray-100;
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(388px, 1fr));
+        gap: 20px;
+
+        @include mq('tablet-2') {
+            grid-template-columns: repeat(auto-fit, minmax(354px, 1fr));
+        }
+
+        @include mq('tablet') {
+            grid-template-columns: repeat(auto-fit, minmax(258px, 1fr));
+        }
+
+        @include mq('phone-2') {
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+        }
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.service-card {
+    width: 100%;
+    padding: 15px 15px 20px;
+    background-color: $white;
+
+    &__link {
+        display: inline-block;
+        margin-bottom: 15px;
+        @include adaptiv-value("height", 315, 270, 0);
+
+        &:focus {
+            box-shadow: 0 0 0 2px $blue-400;
+        }
+
+        &:hover {
+            .service-card__img {
+                transform: scale(1.1);
+            }
+        }
+
+        &:active {
+            .service-card__img {
+                opacity: 0.2;
+            }
+        }
+    }
+
+    &__img {
+        width: 100%;
+        object-fit: contain;
+        transition: transform 0.5s linear, opacity 0.4s;
+
+        @include mq('phone-2') {
+            flex-direction: column;
+        }
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: auto;
+
+        @include mq('phone-2') {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__title {
+        margin-right: 10px;
+
+        @include mq('phone-2') {
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__more {
+        position: relative;
+        padding-right: 26px;
+        color: $blue-400;
+        font-weight: $fw-500;
+        @include link;
+
+        &::after {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 26px;
+            height: 26px;
+            background-color: $blue-400;
+            content: "";
+            mask-image: url('../img/icons/arrow-right.svg');
+            mask-repeat: no-repeat;
+            mask-size: contain;
+            mask-position: center;
+        }
+    }
+}
