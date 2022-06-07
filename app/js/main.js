@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector('.modal').classList.add('modal--active');
     };
 
-
     document.querySelector('.modal__close').onclick = function () {
         document.querySelector('.modal').classList.remove('modal--active');
     };
@@ -131,6 +130,29 @@ document.addEventListener("DOMContentLoaded", () => {
             },
         },
     });
+
+    //Ответы на вопросы
+    const question = document.querySelectorAll('.questions__top');
+    question.forEach(item => {
+        item.addEventListener('click', () => {
+            item.parentNode.classList.toggle('questions__item--active');
+        });
+
+        item.addEventListener('mousedown', (e) => {
+            if (!item.contains(e.target)) {
+                alert ('dada');
+                item.parentNode.classList.remove('questions__item--active');
+            }
+        });
+    });
+
+    // const questions = document.querySelectorAll('.questions__item');
+    // document.addEventListener('mousedown', (e) => {
+    //     if (!questions.contains(e.target)) {
+    //         document.querySelectorAll('.questions__item').classList.remove('questions__item--active');
+    //     }
+    // });
+
 });
 
 
