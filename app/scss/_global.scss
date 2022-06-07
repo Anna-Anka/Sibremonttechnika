@@ -227,3 +227,39 @@ body {
         }
     }
 }
+
+.swiper {
+    position: static;
+}
+
+.swiper-pagination-bullet {
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    background-image: url('../img/icons/setting.svg');
+    transition: opacity 0.3s,
+    box-shadow 0.3s;
+    @include background;
+
+    &:not(:last-child) {
+        margin-right: 10px;
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 2px $blue-400;
+    }
+
+    &:active {
+        opacity: 0.3;
+    }
+}
+
+.swiper-pagination {
+    position: static;
+    display: none;
+
+    @include mq('phone-2') {
+        display: flex;
+        justify-content: center;
+    }
+}

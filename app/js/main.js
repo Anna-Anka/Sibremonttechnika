@@ -99,14 +99,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     //Слайдер в отзывах
-    const swiper = new Swiper('.swiper', {
+    const sliderReviews = document.querySelector('.swiper-reviews');
+    const swiperReviews = new Swiper(sliderReviews, {
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '.reviews__button--next',
+            prevEl: '.reviews__button--prev',
         },
 
         pagination: {
-            el: '.swiper-pagination',
+            el: '.reviews__pagination',
             clickable: true,
         },
 
@@ -125,7 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             320: {
                 slidesPerView: 1,
-                spaceBetween: 1,
+                slidesPerGroup: 1,
                 spaceBetween: 20,
             },
         },
@@ -144,6 +145,50 @@ document.addEventListener("DOMContentLoaded", () => {
                 item.parentNode.classList.remove('questions__item--active');
             }
         });
+    });
+
+    //Свайпер в партнерах
+    const sliderLogos = document.querySelector('.swiper-logos');
+    const swiperLogos = new Swiper(sliderLogos, {
+        slidesPerView: 6,
+        slidesPerGroup: 6,
+        spaceBetween: 20,
+
+        pagination: {
+            el: '.logos__pagination',
+            clickable: true,
+        },
+
+        navigation: {
+            nextEl: '.logos__button--next',
+            prevEl: '.logos__button--prev',
+        },
+
+        breakpoints: {
+            1200: {
+                slidesPerView: 6,
+                slidesPerGroup: 6,
+                spaceBetween: 20,
+            },
+
+            993: {
+                slidesPerView: 5,
+                slidesPerGroup: 5,
+                spaceBetween: 20,
+            },
+
+            768: {
+                slidesPerView: 3,
+                slidesPerGroup: 3,
+                spaceBetween: 20,
+            },
+
+            320: {
+                slidesPerView: 2,
+                slidesPerGroup: 2,
+                spaceBetween: 20,
+            },
+        },
     });
 
     // const questions = document.querySelectorAll('.questions__item');

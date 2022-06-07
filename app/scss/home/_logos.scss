@@ -1,0 +1,34 @@
+.logos {
+    background-color: $gray-100;
+
+    &__wrapper {
+        position: relative;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        padding: 10px;
+        background-color: $white;
+    }
+
+    &__img {
+        height: 65px;
+        object-fit: contain;
+    }
+
+    .swiper-logos {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .swiper-button-disabled {
+        @include swiper-button-disabled;
+    }
+
+    &__button {
+        @include button-swiper;
+    }
+}
