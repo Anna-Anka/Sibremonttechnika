@@ -1,0 +1,39 @@
+@include("./components/_head.html", {
+"title" : "Сибремонттехника — ремонт бытовой техники | Каталог товаров"
+})
+
+@include("./components/_header.html", {
+"class" : "header--line"
+})
+@include("./components/_modal.html")
+
+<div class="breadcrums breadcrums--gray">
+    <div class="container">
+        <ul class="breadcrums__items">
+            <li class="breadcrums__item">
+                <a class="breadcrums__link" href="#">
+                    Главная
+                </a>
+            </li>
+            <li class="breadcrums__item">
+                <span class="breadcrums__link">
+                    Каталог
+                </span>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<main class="main">
+    <div class="catalog">
+        <h1 class="catalog__title title">
+            <span class="title__accent">
+                Каталог
+            </span>
+            товаров
+        </h1>
+    </div>
+</main>
+
+@include("./components/_footer.html")
+@include("./components/_bottom.html")

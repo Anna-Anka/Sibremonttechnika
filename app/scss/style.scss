@@ -12,6 +12,7 @@
 @import 'components/modal';
 @import 'components/reviews';
 @import 'components/questions';
+@import 'components/breadcrums';
 
 //Home
 @import 'home/offer';
@@ -20,3 +21,6 @@
 @import 'home/stages';
 @import 'home/logos';
 @import 'home/contacts';
+
+//Catalog
+@import 'catalog/catalog';

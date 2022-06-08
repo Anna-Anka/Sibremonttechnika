@@ -1,4 +1,28 @@
-<header class="header @class">
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Favicon-->
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="img/favicons/site.webmanifest">
+    <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Сибремонттехника — ремонт бытовой техники | Каталог товаров</title>
+</head>
+
+<body>
+    <div class="wrapper">
+
+<header class="header header--line">
     <nav class="header__navigation">
         <div class="container">
             <div class="header__wrapper">
@@ -244,3 +268,100 @@
         </div>
     </nav>
 </header>
+<section class="modal">
+    <div class="modal__content">
+        <h2 class="modal__title">
+            заказать обратный звонок
+        </h2>
+        <button class="modal__close" type="button">
+            <span class="sr-only">
+                Закрыть окно
+            </span>
+        </button>
+        <form class="form" action="#">
+            <div class="form__item">
+                <label class="sr-only" for="form__call-name">
+                    Введите ваше имя
+                </label>
+                <input class="form__field" type="text" placeholder="Ваше имя" name="name" id="form__call-name" required>
+            </div>
+            <div class="form__item">
+                <label class="sr-only" for="form__call-tel">
+                    Введите ваш номер телефона
+                </label>
+                <input class="form__field" type="tel" placeholder="Ваш номер телефона" name="name" id="form__call-tel" required>
+            </div>
+            <p class="form__text">
+                Пожалуйста, оставьте свой номер телефона и мы вам перезвоним
+            </p>
+            <button class="form__button modal__button button" type="sumbmit">
+                Заказать звонок
+            </button>
+        </form>
+    </div>
+</section>
+
+<div class="breadcrums breadcrums--gray">
+    <div class="container">
+        <ul class="breadcrums__items">
+            <li class="breadcrums__item">
+                <a class="breadcrums__link" href="#">
+                    Главная
+                </a>
+            </li>
+            <li class="breadcrums__item">
+                <span class="breadcrums__link">
+                    Каталог
+                </span>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<main class="main">
+    <div class="catalog">
+        <h1 class="catalog__title title">
+            <span class="title__accent">
+                Каталог
+            </span>
+            товаров
+        </h1>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer__wrapper">
+            <ul class="footer__left">
+                <li class="footer__item">
+                    Номер телефона:
+                    <a class="footer__link" href="tel:+7(985)3453150">
+                        +7 (985) 345-31-50
+                    </a>
+                </li>
+                <li class="footer__item">
+                    Электронная почта:
+                    <a class="footer__link" href="mailto:sibremonttechnika@gmail.com">
+                        sibremonttechnika@gmail.com
+                    </a>
+                </li>
+            </ul>
+            <button class="footer__button button btn-modal" type="button">
+                Оставить заявку
+            </button>
+            <div class="footer__right">
+                <a class="footer__link footer__link--confi" href="#">
+                    Политика конфиденциальности
+                </a>
+                <span class="footer__copy">
+                    Все права защищены © 2022 ООО Сибремонттехника
+                </span>
+            </div>
+        </div>
+    </div>
+</footer>
+ </div>
+ <script src="js/main.min.js"></script>
+ </body>
+
+ </html>

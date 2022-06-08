@@ -1,0 +1,15 @@
+.catalog {
+    background-color: $gray-100;
+
+    &__title {
+        font-size: 44px;
+
+        @include mq('phone-2') {
+            font-size: 40px;
+        }
+
+        @include mq('phone-2') {
+            font-size: 34px;
+        }
+    }
+}
