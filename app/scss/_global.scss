@@ -47,6 +47,10 @@ body {
 
     &:hover {
         box-shadow: inset 12em 0 $dark-800;
+
+        @include mq('phone-2') {
+            box-shadow: unset;
+        }
     }
 
     &:active {

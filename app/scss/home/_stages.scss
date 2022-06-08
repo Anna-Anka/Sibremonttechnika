@@ -2,6 +2,11 @@
 
     &__content {
         position: relative;
+
+        @include mq('phone-2') {
+            display: flex;
+            flex-direction: column;
+        }
     }
 
     &__items {

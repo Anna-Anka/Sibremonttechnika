@@ -5,6 +5,12 @@
         position: relative;
     }
 
+    &__items {
+        @include mq('phone-2') {
+            margin-bottom: 15px;
+        }
+    }
+
     &__item {
         display: flex;
         align-items: center;

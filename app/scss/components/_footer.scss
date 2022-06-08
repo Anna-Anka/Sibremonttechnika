@@ -90,6 +90,10 @@
 
         &:hover {
             box-shadow: inset 12em 0 $white;
+
+            @include mq('phone-2') {
+                box-shadow: unset;
+            }
         }
     }
 

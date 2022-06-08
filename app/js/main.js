@@ -1,17 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     //Вызов модального окна
-    document.querySelector('.header__button').onclick = function () {
-        document.querySelector('.modal').classList.add('modal--active');
-    };
-
-    document.querySelector('.offer__button').onclick = function () {
-        document.querySelector('.modal').classList.add('modal--active');
-    };
-
-    document.querySelector('.footer__button').onclick = function () {
-        document.querySelector('.modal').classList.add('modal--active');
-    };
+    const btnModal = document.querySelectorAll('.btn-modal');
+    btnModal.forEach(item => {
+        item.addEventListener('click', () => {
+            document.querySelector('.modal').classList.add('modal--active')
+        });
+    });
 
     document.querySelector('.modal__close').onclick = function () {
         document.querySelector('.modal').classList.remove('modal--active');
@@ -34,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const toggleMenu = function () {
         document.querySelector('.header__line').classList.toggle('header__line--active');
         menu.classList.toggle('menu--active');
+        document.querySelector('body').classList.toggle('lock');
     }
 
     btnMenu.addEventListener('click', function (e) {
@@ -111,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
             clickable: true,
         },
 
-        breakpoints: {    
+        breakpoints: {
             993: {
                 slidesPerView: 3,
                 slidesPerGroup: 3,
@@ -141,7 +137,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         item.addEventListener('mousedown', (e) => {
             if (!item.contains(e.target)) {
-                alert ('dada');
+                alert('dada');
                 item.parentNode.classList.remove('questions__item--active');
             }
         });
@@ -177,7 +173,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 spaceBetween: 20,
             },
 
-            768: {
+            850: {
+                slidesPerView: 4,
+                slidesPerGroup: 4,
+                spaceBetween: 20,
+            },
+
+            700: {
                 slidesPerView: 3,
                 slidesPerGroup: 3,
                 spaceBetween: 20,
