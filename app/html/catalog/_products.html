@@ -1,0 +1,82 @@
+<section class="products">
+    <h2 class="sr-only">
+        Список товаров
+    </h2>
+    <div class="products__top">
+        <form class="products__sort" action="#">
+            <label class="products__label" for="product__sort">Сортировать по:</label>
+            <select class="products__list" name="product__sort" id=" product__sort">
+                <option value="популярности">популярности</option>
+                <option value="от дорогих к дешевы">от дорогих к дешевым</option>
+                <option value="от дешевых к дорогим">от дешевых к дорогим</option>
+                <option value="рейтингу">рейтингу</option>
+            </select>
+        </form>
+        <button class="products__button" type="button">
+            <span class="sr-only">
+                Открыть фильтры
+            </span>
+        </button>
+    </div>
+    <ul class="products__items">
+        <li class="products__item">
+            @include('../components/_product-card.html', {
+            "img" : "1",
+            "alt" : "Шланг наливной",
+            "title" : "Шланг наливной для стиральной машины Equation 3 м",
+            "price" : "950",
+            "rating" : "5",
+            })
+        </li>
+
+        <li class="products__item">
+            @include('../components/_product-card.html', {
+            "img" : "2",
+            "alt" : "Верхний распылитель",
+            "title" : "Верхний распылитель Beko 1746200100",
+            "price" : "1950",
+            "rating" : "4",
+            })
+        </li>
+
+        <li class="products__item">
+            @include('../components/_product-card.html', {
+            "img" : "3",
+            "alt" : "Импеллер (разбрызгиватель)",
+            "title" : "Импеллер (разбрызгиватель) нижний Beko 1744400200",
+            "price" : "5950",
+            "rating" : "5",
+            })
+        </li>
+
+        <li class="products__item">
+            @include('../components/_product-card.html', {
+            "img" : "4",
+            "alt" : "Прокладка заливного шланга",
+            "title" : "Прокладка заливного шланга 3/4, +(сетка-фильтр), зам. 005781",
+            "price" : "5950",
+            "rating" : "5",
+            })
+        </li>
+
+        <li class="products__item">
+            @include('../components/_product-card.html', {
+            "img" : "5",
+            "alt" : "Шланг заливной",
+            "title" : "Шланг заливной для ПММ с клапаном Аквастоп Indesit 372679/256554/037207",
+            "price" : "5950",
+            "rating" : "5",
+            })
+        </li>
+
+        <li class="products__item">
+            @include('../components/_product-card.html', {
+            "img" : "3",
+            "alt" : "Импеллер (разбрызгиватель)",
+            "title" : "Импеллер (разбрызгиватель) нижний Beko 1744400200",
+            "price" : "5950",
+            "rating" : "5",
+            })
+        </li>
+    </ul>
+</section>

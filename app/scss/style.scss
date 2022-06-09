@@ -13,6 +13,8 @@
 @import 'components/reviews';
 @import 'components/questions';
 @import 'components/breadcrums';
+@import 'components/product-card';
+@import 'components/pagination';
 
 //Home
 @import 'home/offer';
@@ -25,3 +27,4 @@
 //Catalog
 @import 'catalog/catalog';
 @import 'catalog/filters';
+@import 'catalog/products';

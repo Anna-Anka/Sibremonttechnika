@@ -1,0 +1,105 @@
+.products {
+
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    &__sort {
+        display: flex;
+        align-items: center;
+    }
+
+    &__label {
+        margin-right: 4px;
+    }
+
+    .choices {
+        padding-top: 4px;
+        &__inner {
+            background-color: transparent;
+            border: 0;
+            font-size: 16px;
+            line-height: 1.3;
+            font-family: $roboto;
+            color: $blue-400;
+            border-radius: 0;
+            min-height: auto;
+            padding: 0 31px 0 0;
+        }
+
+        &__list {
+            padding: 0;
+        }
+    }
+
+    .choices__list--dropdown,
+    .choices__list[aria-expanded] {
+        border: none;
+        margin-top: 0;
+    }
+
+    .choices[data-type*=select-one] {
+        .choices__inner {
+            padding-bottom: 0;
+        }
+
+        &::after {
+            width: 26px;
+            height: 26px;
+            @include background;
+            background-image: url('../img/icons/arrow-up.svg');
+            filter: invert(46%) sepia(24%) saturate(6633%) hue-rotate(187deg) brightness(93%) contrast(84%);
+
+            border: none;
+            right: 0;
+            top: 45%;
+            margin-top: 0;
+            transform: translateY(-50%);
+
+        }
+    }
+
+    .choices__list--dropdown .choices__item--selectable,
+    .choices__list[aria-expanded] .choices__item--selectable {
+        padding-right: 0;
+    }
+
+
+    &__button {
+        position: relative;
+        display: none;
+        width: 40px;
+        height: 40px;
+
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('../img/icons/filters.svg');
+            content: "";
+            @include background;
+        }
+
+
+        @include mq('tablet-2') {
+            display: block;
+        }
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+    }
+}

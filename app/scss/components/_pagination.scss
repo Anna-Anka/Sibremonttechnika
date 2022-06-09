@@ -1,0 +1,54 @@
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__items {
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+    }
+
+    &__link,
+    &__info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 41px;
+        height: 41px;
+        font-weight: $fw-700;
+        font-family: $oswald;
+        background-color: transparent;
+        border: 2px solid $blue-400;
+    }
+
+    &__link  {
+        transition: box-shadow 0.5s, opacity 0.4s, color 0.4s, background-color 0.4s;
+
+        &--current {
+            color: $white;
+            background-color: $blue-400;
+            cursor: auto;
+        }
+
+        &:focus {
+            box-shadow: inset 30em 0 $dark-800, 0 0 0 2px $blue-400;
+            color: $white;
+        }
+
+        &:hover {
+            color: $white;
+            box-shadow: inset 12em 0 $blue-400;
+        }
+
+        &:active {
+            opacity: 0.6;
+        }
+    }
+}

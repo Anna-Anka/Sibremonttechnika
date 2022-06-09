@@ -59,13 +59,12 @@
         width: 50%;
         bottom: 0;
         background-position: center left;
-        // background-position-x: -50%;
         background-repeat: no-repeat;
         background-size: cover;
 
         @include mq('tablet-2') {
             width: 100%;
-            height: 470px;
+            height: 430px;
             background-position: center;
         }
 

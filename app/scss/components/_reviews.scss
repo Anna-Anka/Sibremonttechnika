@@ -43,21 +43,6 @@
         margin-bottom: 15px;
     }
 
-    &__rating {
-        display: flex;
-    }
-
-    &__star {
-        @include background;
-        display: inline-block;
-        width: 24px;
-        height: 24px;
-
-        &:not(:last-child) {
-            margin-right: 5px;
-        }
-    }
-
     &__text {
         margin-bottom: 10px;
 

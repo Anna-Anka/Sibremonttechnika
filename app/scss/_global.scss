@@ -50,13 +50,19 @@ body {
     }
 
     &:active {
-        opacity: 0.3;
+        opacity: 0.6;
     }
 
     &--border {
         color: $blue-400;
         background-color: transparent;
         border: 2px solid $blue-400;
+        transition: box-shadow 0.5s, opacity 0.4s, color 0.4s;
+
+        &:hover {
+            color: $white;
+            box-shadow: inset 30em 0 $blue-400;
+        }
     }
 }
 
@@ -88,14 +94,14 @@ body {
 .title {
     padding: 10px 0;
     font-weight: $fw-700;
-    @include adaptiv-value("margin-bottom", 40, 30, 0); 
+    @include adaptiv-value("margin-bottom", 40, 30, 0);
     @include adaptiv-value("font-size", 34, 30, 0);
 
     &__accent {
+        margin-right: 5px;
+        padding-left: 9px;
         color: $white;
         background-color: $dark-800;
-        padding-left: 9px;
-        margin-right: 5px;
     }
 }
 
@@ -238,7 +244,7 @@ body {
     background-color: transparent;
     background-image: url('../img/icons/setting.svg');
     transition: opacity 0.3s,
-    box-shadow 0.3s;
+        box-shadow 0.3s;
     @include background;
 
     &:not(:last-child) {
@@ -303,5 +309,20 @@ body {
 
     &:focus {
         box-shadow: 0 0 0 2px $blue-400;
+    }
+}
+
+.rating {
+    display: flex;
+
+    &__star {
+        @include background;
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+
+        &:not(:last-child) {
+            margin-right: 5px;
+        }
     }
 }

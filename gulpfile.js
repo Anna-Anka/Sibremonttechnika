@@ -104,6 +104,7 @@ function scripts() {
             // 'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
             'node_modules/swiper/swiper-bundle.min.js',
             'node_modules/nouislider/dist/nouislider.min.js',
+            'node_modules/choices.js/public/assets/scripts/choices.min.js',
             'app/js/main.js'
         ])
         .pipe(concat('main.min.js'))

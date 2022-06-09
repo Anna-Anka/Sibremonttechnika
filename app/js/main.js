@@ -211,7 +211,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const fields = [price_from, price_to];
 
-    Price.noUiSlider.on('update', function(values, handle) {
+    Price.noUiSlider.on('update', function (values, handle) {
         fields[handle].value = Math.round(values[handle])
     });
 
@@ -241,6 +241,17 @@ document.addEventListener("DOMContentLoaded", () => {
             item.parentNode.classList.toggle('filters__item--hidden');
         });
     });
+
+    //Select
+    const defaultSelect = () => {
+        const element = document.querySelector('.products__list');
+        const choices = new Choices(element, {
+            searchEnabled: false,
+        });
+    };
+
+    defaultSelect();
+
 
     // const questions = document.querySelectorAll('.questions__item');
     // document.addEventListener('mousedown', (e) => {
