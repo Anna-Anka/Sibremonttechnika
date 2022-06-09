@@ -137,9 +137,7 @@
     }
 
     &__button {
-        transition: opacity 0.3s,
-            box-shadow 0.3s,
-            color 0.3s;
+        transition: opacity 0.3s, box-shadow 0.3s, color 0.3s;
 
         &:hover {
             color: $blue-400;
@@ -155,7 +153,7 @@
     width: 100%;
     max-height: 100vh;
     padding: 30px 0 40px;
-    overflow-y: scroll;
+    overflow-y: auto;
     background-color: $white;
     transform: translateY(100%);
 

@@ -193,6 +193,55 @@ document.addEventListener("DOMContentLoaded", () => {
         },
     });
 
+    //Фильтр цены
+    const Price = document.querySelector('.filters-price__slider');
+
+    noUiSlider.create(Price, {
+        start: [500, 100000],
+        connect: true,
+        step: 1,
+        range: {
+            'min': [500],
+            'max': [100000]
+        }
+    });
+
+    const price_from = document.querySelector('.filters-price__field--from');
+    const price_to = document.querySelector('.filters-price__field--to');
+
+    const fields = [price_from, price_to];
+
+    Price.noUiSlider.on('update', function(values, handle) {
+        fields[handle].value = Math.round(values[handle])
+    });
+
+    const setPrice = (i, value) => {
+        let arr = [null, null];
+        arr[i] = value;
+
+        Price.noUiSlider.set(arr)
+    };
+
+    fields.forEach((el, index) => {
+        el.addEventListener('change', (e) => {
+            setPrice(index, e.currentTarget.value);
+        });
+    });
+
+
+    //Кнопка «Показать ещё»
+    document.querySelector('.filters__more').onclick = function () {
+        this.classList.toggle('filters__more--active');
+    };
+
+    //Скрывать фильтры по клику на заголовок
+    const filterTitle = document.querySelectorAll('.filters__top');
+    filterTitle.forEach(item => {
+        item.addEventListener('click', () => {
+            item.parentNode.classList.toggle('filters__item--hidden');
+        });
+    });
+
     // const questions = document.querySelectorAll('.questions__item');
     // document.addEventListener('mousedown', (e) => {
     //     if (!questions.contains(e.target)) {

@@ -1,0 +1,303 @@
+.filters {
+    max-width: 286px;
+    padding: 20px;
+    background-color: $white;
+
+    &__item {
+        margin-bottom: 20px;
+
+        &--price {
+            margin-bottom: 25px;
+        }
+
+        &--hidden {
+            .filters__content {
+                display: none;
+            }
+
+            .filters__button {
+                &::after {
+                    background-color: $blue-400;
+                }
+
+                &::before {
+                    transform: translate(-50%, -50%) rotate(180deg);
+                }
+            }
+        }
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        transition: opacity 0.4s;
+
+        &:hover {
+            .filters__button {
+                &::after {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+        &:active {
+            opacity: 0.7;
+        }
+    }
+
+    &__subtitle {
+        margin-right: 7px;
+    }
+
+    &__more {
+        position: relative;
+        margin-top: 15px;
+        padding: 1px 30px 1px 0;
+        color: $blue-400;
+        @include link;
+
+        &::after {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 26px;
+            height: 26px;
+            background-color: $blue-400;
+            transform: rotate(-180deg);
+            transition: transform 0.4s;
+            content: "";
+            mask-repeat: no-repeat;
+            mask-size: contain;
+            mask-position: center;
+            mask-image: url('../img/icons/arrow-up.svg');
+        }
+
+        &--active {
+            &::after {
+                transform: rotate(0);
+            }
+        }
+    }
+
+    &__result {
+        width: 100%;
+    }
+}
+
+.filters-categories {
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__link {
+        transition: color 0.4s, opacity 0.4s, box-shadow 0.4s;
+
+        &:focus {
+            box-shadow: 0 0 0 2px $blue-400;
+        }
+
+        &:hover {
+            color: $blue-400;
+        }
+
+        &:active {
+            opacity: 0.7;
+        }
+    }
+}
+
+.filters-form {
+    &__item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        transition: opacity 0.4s, color 0.4s;
+
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+
+        &:hover {
+            color: $blue-400;
+            cursor: pointer;
+
+            .filters-form__visible {
+                border-color: $blue-400;
+            }
+        }
+
+        &:active {
+            opacity: 0.7;
+        }
+    }
+
+    &__visible {
+        position: relative;
+        display: inline-block;
+        order: -1;
+        width: 20px;
+        height: 20px;
+        margin-right: 7px;
+        background-color: transparent;
+        border: 2px solid $gray-600;
+        @include background;
+
+        &::before {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            content: "";
+        }
+
+        &--check {
+            &::before {
+                @include background;
+                transform: rotate(-180deg);
+                opacity: 0;
+                transition: opacity 0.4s;
+            }
+        }
+
+        &--radio {
+            border-radius: 50%;
+
+            &::before {
+                background-color: transparent;
+                border: 2px solid $white;
+                border-radius: 50%;
+                transition: background-color 0.4s;
+            }
+        }
+    }
+
+    &__unvisible {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+
+        &:checked {
+            &+.filters-form__visible {
+                background-color: $blue-400;
+                border-color: $blue-400;
+
+                &--check {
+                    &::before {
+                        background-image: url('../img/icons/arrow-up.svg');
+                        opacity: 1;
+                    }
+                }
+
+                &--radio {
+                    &::before {
+                        background-color: $blue-400;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.filters-price {
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        margin: 0;
+        -webkit-appearance: none;
+    }
+
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+
+    &__slider {
+        width: 97%;
+        height: 20px;
+        background-color: $gray-600;
+        box-shadow: none;
+    }
+
+    .noUi-connect {
+        background-color: $blue-400;
+    }
+
+    .noUi-target,
+    .noUi-handle {
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .noUi-target {
+        height: 2px;
+    }
+
+    .noUi-horizontal .noUi-handle-upper {
+        right: 0;
+    }
+
+    .noUi-handle {
+        top: -7px;
+        width: 16px;
+        height: 16px;
+        background-color: transparent;
+        background-image: url('../img/icons/setting.svg');
+        @include background;
+        transform: translateX(-50%);
+
+        &::before,
+        &::after {
+            display: none;
+        }
+    }
+
+    .noUi-handle-upper {
+        transform: translateX(50%);
+    }
+
+    &__items,
+    &__item {
+        display: flex;
+        align-items: center;
+    }
+
+    &__items {
+        margin-bottom: 15px;
+    }
+
+    &__item {
+        margin-right: 8px;
+    }
+
+    &__label {
+        margin-right: 5px;
+    }
+
+    &__field {
+        width: 100%;
+        max-width: 80px;
+        padding: 3px 6px;
+        text-align: center;
+        background-color: $gray-100;
+        border: 2px solid transparent;
+        transition: border-color 0.4s;
+
+        &::placeholder {
+            color: $gray-600;
+            transition: color 0.3s;
+
+            &:hover {
+                color: $dark-800;
+            }
+        }
+
+        &:focus {
+            border-color: $blue-400;
+        }
+    }
+}

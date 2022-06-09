@@ -26,12 +26,17 @@
 
 <main class="main">
     <div class="catalog">
-        <h1 class="catalog__title title">
-            <span class="title__accent">
-                Каталог
-            </span>
-            товаров
-        </h1>
+        <div class="container">
+            <h1 class="catalog__title title">
+                <span class="title__accent">
+                    Каталог
+                </span>
+                товаров
+            </h1>
+            <div class="catalog__box">
+                @include("./catalog/_filters.html")
+            </div>
+        </div>
     </div>
 </main>
 

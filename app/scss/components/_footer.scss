@@ -65,7 +65,7 @@
     }
 
     &__button {
-        transition: box-shadow 0.3s, opacity 0.3s, color 0.3s;
+        transition: box-shadow 0.5s, opacity 0.4s, color 0.4s;
         @include mq('tablet-2') {
             order: 1;
         }
@@ -85,15 +85,11 @@
         }
 
         &:focus {
-            box-shadow: inset 12em 0 $white, 0 0 0 2px $blue-400;
+            box-shadow: inset 30em 0 $white, 0 0 0 2px $blue-400;
         }
 
         &:hover {
-            box-shadow: inset 12em 0 $white;
-
-            @include mq('phone-2') {
-                box-shadow: unset;
-            }
+            box-shadow: inset 30em 0 $white;
         }
     }
 
