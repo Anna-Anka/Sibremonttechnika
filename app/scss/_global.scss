@@ -109,6 +109,18 @@ body {
         color: $white;
         background-color: $dark-800;
     }
+
+    &--big {
+        font-size: 44px;
+
+        @include mq('phone-2') {
+            font-size: 40px;
+        }
+
+        @include mq('phone-2') {
+            font-size: 34px;
+        }
+    }
 }
 
 .subtitle {

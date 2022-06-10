@@ -1,7 +1,7 @@
 <div class="blackout"></div>
 
 @include("./components/_head.html", {
-"title" : "Сибремонттехника — ремонт бытовой техники | Каталог товаров"
+"title" : "Сибремонттехника — ремонт бытовой техники | Поиск"
 })
 
 @include("./components/_header.html", {
@@ -19,7 +19,7 @@
             </li>
             <li class="breadcrums__item">
                 <span class="breadcrums__link">
-                    Каталог
+                    Поиск
                 </span>
             </li>
         </ul>
@@ -27,23 +27,17 @@
 </div>
 
 <main class="main">
-    <div class="catalog">
+    <div class="search-wrapper">
         <div class="container">
             <h1 class="title title--big">
                 <span class="title__accent">
-                    Каталог
+                    Результаты
                 </span>
-                товаров
+                поиска
             </h1>
-            <div class="catalog__box">
-                @include("./catalog/_filters.html")
-                <div class="catalog__wrapper">
-                    @include("./catalog/_products.html")
-                    @include("./components/_pagination.html")
-                </div>
-            </div>
+            @include("./search/_search.html")
         </div>
-    </div>
+    </div>   
 </main>
 
 @include("./components/_footer.html")

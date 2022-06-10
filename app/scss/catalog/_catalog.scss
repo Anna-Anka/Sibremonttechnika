@@ -2,18 +2,6 @@
     background-color: $gray-100;
     @include adaptiv-value("padding-bottom", 100, 60, 0);
 
-    &__title {
-        font-size: 44px;
-
-        @include mq('phone-2') {
-            font-size: 40px;
-        }
-
-        @include mq('phone-2') {
-            font-size: 34px;
-        }
-    }
-
     &__box {
         display: flex;
     }
