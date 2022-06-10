@@ -13,7 +13,7 @@
                 @price ₽
             </span>
             @if(context.rating === "5") {
-                <div class="rating" aria-label="Рейтинг 5 из 5">
+                <div class="product-card__rating rating" aria-label="Рейтинг 5 из 5">
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
@@ -23,7 +23,7 @@
             }
 
             @if(context.rating === "4") {
-                <div class="rating" aria-label="Рейтинг 4 из 5">
+                <div class="product-card__rating rating" aria-label="Рейтинг 4 из 5">
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
@@ -32,7 +32,7 @@
             }
 
             @if(context.rating === "3") {
-            <div class="rating" aria-label="Рейтинг 3 из 5">
+            <div class="product-card__rating rating" aria-label="Рейтинг 3 из 5">
                 <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                 <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                 <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
@@ -40,14 +40,14 @@
             }
 
             @if(context.rating === "2") {
-            <div class="rating" aria-label="Рейтинг 2 из 5">
+            <div class="product-card__rating rating" aria-label="Рейтинг 2 из 5">
                 <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                 <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
             </div>
             }
 
             @if(context.rating === "1") {
-            <div class="rating" aria-label="Рейтинг 1 из 5">
+            <div class="product-card__rating rating" aria-label="Рейтинг 1 из 5">
                 <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
             </div>
             }

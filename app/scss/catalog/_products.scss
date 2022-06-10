@@ -19,15 +19,15 @@
     .choices {
         padding-top: 4px;
         &__inner {
-            background-color: transparent;
-            border: 0;
-            font-size: 16px;
-            line-height: 1.3;
-            font-family: $roboto;
-            color: $blue-400;
-            border-radius: 0;
             min-height: auto;
             padding: 0 31px 0 0;
+            color: $blue-400;
+            font-size: 16px;
+            font-family: $roboto;
+            line-height: 1.3;
+            background-color: transparent;
+            border: 0;
+            border-radius: 0;
         }
 
         &__list {
@@ -35,10 +35,20 @@
         }
     }
 
+    .choices__list--dropdown .choices__item--selectable.is-highlighted::after {
+        display: none;
+    }
+
+    .choices__list .choices__item {
+        font-size: 16px;
+        line-height: 1.3;
+    }
+
     .choices__list--dropdown,
     .choices__list[aria-expanded] {
-        border: none;
         margin-top: 0;
+        border: none;
+        width: 260px;
     }
 
     .choices[data-type*=select-one] {
@@ -47,24 +57,28 @@
         }
 
         &::after {
+            top: 45%;
+            right: 0;
             width: 26px;
             height: 26px;
-            @include background;
-            background-image: url('../img/icons/arrow-up.svg');
-            filter: invert(46%) sepia(24%) saturate(6633%) hue-rotate(187deg) brightness(93%) contrast(84%);
-
-            border: none;
-            right: 0;
-            top: 45%;
             margin-top: 0;
-            transform: translateY(-50%);
+            background-image: url('../img/icons/arrow-up.svg');
+            border: none;
+            transform: translateY(-50%) rotate(180deg);
+            transition: transform 0.3s;
+            filter: invert(46%) sepia(24%) saturate(6633%) hue-rotate(187deg) brightness(93%) contrast(84%);
+            @include background;
 
         }
     }
 
+    .is-open.choices[data-type*=select-one]::after {
+        transform: translateY(-50%) rotate(0);
+    }
+
     .choices__list--dropdown .choices__item--selectable,
     .choices__list[aria-expanded] .choices__item--selectable {
-        padding-right: 0;
+        padding-right: 10px;
     }
 
 
@@ -96,6 +110,10 @@
         grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
         gap: 20px;
         margin-bottom: 20px;
+
+        @include mq('phone-2') {
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+        }
     }
 
     &__item {

@@ -1,9 +1,25 @@
 .filters {
+    align-self: flex-start;
     width: 100%;
     max-width: 286px;
     margin-right: 20px;
     padding: 20px;
     background-color: $white;
+
+    @include mq('tablet-2') {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        display: none;
+        height: 100vh;
+        margin-right: 0;
+        overflow: auto;
+    }
+
+    &--active {
+        display: block;
+    }
 
     &__item {
         margin-bottom: 20px;

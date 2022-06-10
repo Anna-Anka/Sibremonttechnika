@@ -252,6 +252,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     defaultSelect();
 
+    document.querySelector('.blackout').onclick = function () {
+        document.querySelector('.filters').classList.remove('filters--active');
+        this.classList.remove('blackout--active');
+    };
+
+
+    //Фильтры на мобильной версии
+    document.querySelector('.products__button').onclick = function () {
+        document.querySelector('.filters').classList.toggle('filters--active');
+        document.querySelector('body').classList.toggle('lock');
+        document.querySelector('.blackout').classList.toggle('blackout--active');
+    };
 
     // const questions = document.querySelectorAll('.questions__item');
     // document.addEventListener('mousedown', (e) => {
