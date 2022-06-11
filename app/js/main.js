@@ -166,17 +166,50 @@ document.addEventListener("DOMContentLoaded", () => {
         },
     });
 
+    //Слайдер на странице товара
+    const sliderMain = document.querySelector('.product__main');
+    const sliderNav = document.querySelector('.product__small');
+
+    let swiperSmall = new Swiper(sliderNav, {
+        slidesPerView: 3,
+        spaceBetween: 10,
+        loopedSlides: 3,
+        freeMode: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        loop: true,
+        direction: 'vertical',
+        // pagination: {
+        //     el: '.swiper-pagination',
+        //     clickable: true,
+        // },
+        navigation: {
+            nextEl: '.product__button--next',
+            prevEl: '.product__button--prev',
+        },
+    })
+
+    let swiperMain = new Swiper(sliderMain, {
+        spaceBetween: 10,
+        loop: true,
+        loopedSlides: 3,
+        thumbs: {
+            swiper: swiperSmall,
+        }
+    })
+
+
     //Ответы на вопросы
-    const question = document.querySelectorAll('.questions__top');
+    const question = document.querySelectorAll('.accordion-card__top');
     question.forEach(item => {
         item.addEventListener('click', () => {
-            item.parentNode.classList.toggle('questions__item--active');
+            item.parentNode.classList.toggle('accordion-card--active');
         });
 
         item.addEventListener('mousedown', (e) => {
             if (!item.contains(e.target)) {
                 alert('dada');
-                item.parentNode.classList.remove('questions__item--active');
+                item.parentNode.classList.remove('accordion-card--active');
             }
         });
     });

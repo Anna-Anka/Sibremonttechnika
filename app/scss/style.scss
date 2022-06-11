@@ -16,6 +16,7 @@
 @import 'components/product-card';
 @import 'components/pagination';
 @import 'components/products-watch';
+@import 'components/accordion-card';
 
 //Home
 @import 'home/offer';
@@ -32,3 +33,6 @@
 
 //Search
 @import 'search/search';
+
+//Product 
+@import 'product/product';

@@ -1,5 +1,6 @@
 .logos {
     background-color: $gray-100;
+    @include adaptiv-value("padding-top", 100, 60, 0);
 
     &__wrapper {
         position: relative;

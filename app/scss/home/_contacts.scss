@@ -1,6 +1,7 @@
 .contacts {
     position: relative;
     padding-bottom: 0;
+    @include adaptiv-value("padding-top", 100, 60, 0);
 
     &__container {
         @include mq('tablet-2') {

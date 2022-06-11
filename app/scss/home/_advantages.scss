@@ -1,4 +1,6 @@
 .advantages {
+    @include adaptiv-value("padding-top", 100, 60, 0);
+    
     &__list {
         width: 100%;
         max-width: 1000px;

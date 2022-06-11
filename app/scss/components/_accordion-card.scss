@@ -1,0 +1,84 @@
+.accordion-card {
+
+    &--white {
+        .accordion-card__top,
+        .accordion-card__text {
+            background-color: $white;
+        }
+    }
+    
+    &--active {
+        .accordion-card__top {
+            background-color: $blue-400;
+        }
+
+        .accordion-card__text {
+            max-height: 100vh;
+            padding: 15px 20px;
+        }
+
+        .accordion-card__title {
+            color: $white;
+        }
+
+        .accordion-card__button {
+            &::after {
+                background-color: $white;
+            }
+
+            &::before {
+                transform: rotate(-180deg) translate(50%, 45%);
+                filter: invert(42%) sepia(94%) saturate(1767%) hue-rotate(185deg) brightness(91%) contrast(88%)
+            }
+
+            &:focus {
+                box-shadow: 0 0 0 2px $white;
+            }
+        }
+    }
+
+    &__top,
+    &__text {
+        padding: 15px 20px;
+        background-color: $gray-100;
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: background-color 0.4s, opacity 0.3s;
+
+        &:hover {
+            cursor: pointer;
+
+            .accordion-card__button {
+                &::after {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+        &:active {
+            opacity: 0.7;
+        }
+    }
+
+    &__title {
+        margin-right: 10px;
+        transition: color 0.3s;
+    }
+
+    &__text {
+        max-height: 0;
+        padding: 0 20px;
+        transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+
+
+        p {
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

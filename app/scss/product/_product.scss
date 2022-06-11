@@ -1,0 +1,250 @@
+.product {
+    background-color: $gray-100;
+
+    &__top,
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__top {
+        align-items: flex-start;
+        margin-bottom: 60px;
+    }
+
+    &__left {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        max-width: 560px;
+        margin-right: 20px;
+    }
+
+    &__nav {
+        position: relative;
+    }
+
+    &__small {
+        flex-shrink: 0;
+        width: 102px;
+        height: 326px;
+        margin-right: 20px;
+        overflow: hidden;
+    }
+
+    &__thumb,
+    &__big {
+        box-sizing: border-box;
+        background-color: $white;
+    }
+
+    &__thumb {
+        padding: 5px;
+        list-style-type: none;
+        border: 2px solid transparent;
+        cursor: pointer;
+        transition: border-color 0.4s;
+    }
+
+    &__big {
+        padding: 10px;
+    }
+
+    &__image,
+    &__img {
+        object-fit: contain;
+    }
+
+    &__image {
+        width: 102px;
+        height: 102px;
+    }
+
+    &__img {
+        width: 438px;
+        height: 438px;
+    }
+
+    &__main {
+        height: 438px;
+        overflow: hidden;
+    }
+
+    &__button {
+        @include button-swiper;
+        width: 46px;
+        height: 46px;
+
+        &--prev {
+            top: -10px;
+            left: 43%;
+            transform: translate(-50%, -50%) rotate(90deg);
+        }
+
+        &--next {
+            top: unset;
+            bottom: -30px;
+            left: 43%;
+            transform: translate(-50%, 50%) rotate(90deg);
+        }
+    }
+
+    .swiper-slide-thumb-active {
+        border-color: $blue-400
+    }
+
+    &__right {
+        width: 100%;
+        max-width: 592px;
+    }
+
+    &__title {
+        margin-bottom: 25px;
+        font-weight: $fw-700;
+        font-size: 34px;
+        font-family: $oswald;
+        line-height: 1.3;
+        text-transform: uppercase;
+    }
+
+    &__info,
+    &__prices {
+        display: flex;
+        align-items: center;
+    }
+
+    &__info {
+        margin-bottom: 25px;
+    }
+
+    &__prices {
+        margin-right: 40px;
+    }
+
+    &__price {
+        color: $blue-400;
+        font-size: 24px;
+        font-family: $oswald;
+
+        &--old {
+            margin-right: 10px;
+            color: $dark-800;
+            font-size: 16px;
+            text-decoration: line-through;
+        }
+    }
+
+    &__available {
+        position: relative;
+        padding-left: 29px;
+        color: $blue-400;
+
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 24px;
+            height: 24px;
+            background-color: $blue-400;
+            content: "";
+            mask-image: url('../img/icons/available.svg');
+            mask-repeat: no-repeat;
+            mask-size: contain;
+            mask-position: center;
+        }
+
+        &--unavailable {
+            color: $gray-150;
+
+            &::before {
+                background-color: $gray-150;
+            }
+        }
+    }
+
+    &__count {
+        color: $dark-800;
+    }
+
+    &__items {
+        margin-bottom: 30px;
+    }
+
+    &__item {
+        overflow: hidden;
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__descr {
+        width: 100%;
+        max-width: 560px;
+        margin-right: 20px;
+    }
+
+    &__subtitle {
+        margin-bottom: 20px;
+        font-weight: $fw-500;
+        font-size: 24px;
+        font-family: $oswald;
+        line-height: 1.3;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        margin-bottom: 20px;
+
+        p {
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    &__characteristics {
+        width: 100%;
+        max-width: 592px;
+    }
+
+    &__list {
+        margin-bottom: 20px;
+    }
+
+    &__characteristic {
+        display: flex;
+
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__parameter {
+        display: inline-block;
+        width: 69%;
+        margin-right: -30%;
+        overflow: hidden;
+
+        &::after {
+            display: inline-block;
+            width: 100%;
+            margin: 0 -99% 0 3px;
+            border-bottom: 1px dashed $gray-600;
+            content: '';
+        }
+    }
+
+    &__meaining {
+        display: inline-block;
+        width: 30%;
+        margin-left: 30%;
+        padding-left: 3px;
+        text-align: right;
+    }
+
+
+    &__more {
+        color: $blue-400;
+    }
+}

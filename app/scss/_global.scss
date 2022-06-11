@@ -86,7 +86,6 @@ body {
 }
 
 .section {
-    @include adaptiv-value("padding-top", 100, 60, 0);
     @include adaptiv-value("padding-bottom", 100, 60, 0);
 }
 
