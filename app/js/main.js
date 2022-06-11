@@ -128,6 +128,44 @@ document.addEventListener("DOMContentLoaded", () => {
         },
     });
 
+    //Слайдер просмотренные товары
+    const sliderWatch = document.querySelector('.products-watch__swiper');
+    const swiperWatch = new Swiper(sliderWatch, {
+        slidesPerView: 4,
+        slidesPerGroup: 4,
+        spaceBetween: 20,
+
+        pagination: {
+            el: '.products-watch__pagination',
+            clickable: true,
+        },
+
+        navigation: {
+            nextEl: '.products-watch__button--next',
+            prevEl: '.products-watch__button--prev',
+        },
+
+        breakpoints: {
+            993: {
+                slidesPerView: 4,
+                slidesPerGroup: 4,
+                spaceBetween: 20,
+            },
+
+            768: {
+                slidesPerView: 3,
+                slidesPerGroup: 3,
+                spaceBetween: 20,
+            },
+
+            480: {
+                slidesPerView: 2,
+                slidesPerGroup: 2,
+                spaceBetween: 20,
+            },
+        },
+    });
+
     //Ответы на вопросы
     const question = document.querySelectorAll('.questions__top');
     question.forEach(item => {

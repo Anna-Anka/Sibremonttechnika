@@ -1,0 +1,35 @@
+.products-watch {
+    background-color: $gray-100;
+    
+    &__wrapper {
+        position: relative;
+    }
+
+    &__swiper {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    &__items {
+        @include mq('phone-2') {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .swiper-slide {
+        height: unset;
+    }
+
+    .swiper-button-disabled {
+        @include swiper-button-disabled;
+    }
+
+    &__button {
+        @include button-swiper;
+    }
+}
