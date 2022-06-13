@@ -179,10 +179,7 @@ document.addEventListener("DOMContentLoaded", () => {
         watchSlidesProgress: true,
         loop: true,
         direction: 'vertical',
-        // pagination: {
-        //     el: '.swiper-pagination',
-        //     clickable: true,
-        // },
+
         navigation: {
             nextEl: '.product__button--next',
             prevEl: '.product__button--prev',
@@ -193,11 +190,25 @@ document.addEventListener("DOMContentLoaded", () => {
         spaceBetween: 10,
         loop: true,
         loopedSlides: 3,
+
         thumbs: {
             swiper: swiperSmall,
-        }
+        },
+
+        pagination: {
+            el: '.product__pagination',
+            clickable: true,
+        },
     })
 
+    //Показать все на странице товара
+    document.querySelector('.product__more--descr').onclick = function () {
+        this.classList.toggle('product__more--active');
+    };
+
+    document.querySelector('.product__more--characteristics').onclick = function () {
+        this.classList.toggle('product__more--active');
+    };
 
     //Ответы на вопросы
     const question = document.querySelectorAll('.accordion-card__top');
