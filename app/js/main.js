@@ -95,116 +95,130 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     //Слайдер в отзывах
-    const sliderReviews = document.querySelector('.swiper-reviews');
-    const swiperReviews = new Swiper(sliderReviews, {
-        navigation: {
-            nextEl: '.reviews__button--next',
-            prevEl: '.reviews__button--prev',
-        },
-
-        pagination: {
-            el: '.reviews__pagination',
-            clickable: true,
-        },
-
-        breakpoints: {
-            993: {
-                slidesPerView: 3,
-                slidesPerGroup: 3,
-                spaceBetween: 20,
+    if (document.querySelector('.swiper-reviews')) {
+        const sliderReviews = document.querySelector('.swiper-reviews');
+        const swiperReviews = new Swiper(sliderReviews, {
+            navigation: {
+                nextEl: '.reviews__button--next',
+                prevEl: '.reviews__button--prev',
             },
 
-            768: {
-                slidesPerView: 2,
-                slidesPerGroup: 2,
-                spaceBetween: 20,
+            pagination: {
+                el: '.reviews__pagination',
+                clickable: true,
             },
 
-            320: {
-                slidesPerView: 1,
-                slidesPerGroup: 1,
-                spaceBetween: 20,
+            breakpoints: {
+                993: {
+                    slidesPerView: 3,
+                    slidesPerGroup: 3,
+                    spaceBetween: 20,
+                },
+
+                768: {
+                    slidesPerView: 2,
+                    slidesPerGroup: 2,
+                    spaceBetween: 20,
+                },
+
+                320: {
+                    slidesPerView: 1,
+                    slidesPerGroup: 1,
+                    spaceBetween: 20,
+                },
             },
-        },
-    });
+        });
+    }
 
     //Слайдер просмотренные товары
-    const sliderWatch = document.querySelector('.products-watch__swiper');
-    const swiperWatch = new Swiper(sliderWatch, {
-        slidesPerView: 4,
-        slidesPerGroup: 4,
-        spaceBetween: 20,
+    if (document.querySelector('.products-watch__swiper')) {
+        const sliderWatch = document.querySelector('.products-watch__swiper');
+        const swiperWatch = new Swiper(sliderWatch, {
+            slidesPerView: 4,
+            slidesPerGroup: 4,
+            spaceBetween: 20,
 
-        pagination: {
-            el: '.products-watch__pagination',
-            clickable: true,
-        },
-
-        navigation: {
-            nextEl: '.products-watch__button--next',
-            prevEl: '.products-watch__button--prev',
-        },
-
-        breakpoints: {
-            993: {
-                slidesPerView: 4,
-                slidesPerGroup: 4,
-                spaceBetween: 20,
+            pagination: {
+                el: '.products-watch__pagination',
+                clickable: true,
             },
 
-            768: {
-                slidesPerView: 3,
-                slidesPerGroup: 3,
-                spaceBetween: 20,
+            navigation: {
+                nextEl: '.products-watch__button--next',
+                prevEl: '.products-watch__button--prev',
             },
 
-            480: {
-                slidesPerView: 2,
-                slidesPerGroup: 2,
-                spaceBetween: 20,
+            breakpoints: {
+                993: {
+                    slidesPerView: 4,
+                    slidesPerGroup: 4,
+                    spaceBetween: 20,
+                },
+
+                768: {
+                    slidesPerView: 3,
+                    slidesPerGroup: 3,
+                    spaceBetween: 20,
+                },
+
+                480: {
+                    slidesPerView: 2,
+                    slidesPerGroup: 2,
+                    spaceBetween: 20,
+                },
             },
-        },
-    });
+        });
+    }
 
     //Слайдер на странице товара
-    const sliderMain = document.querySelector('.product__main');
-    const sliderNav = document.querySelector('.product__small');
+    if (document.querySelector('.product__main')) {
+        const sliderMain = document.querySelector('.product__main');
+        const sliderNav = document.querySelector('.product__small');
 
-    let swiperSmall = new Swiper(sliderNav, {
-        slidesPerView: 3,
-        spaceBetween: 10,
-        loopedSlides: 3,
-        freeMode: true,
-        watchSlidesVisibility: true,
-        watchSlidesProgress: true,
-        loop: true,
-        direction: 'vertical',
+        let swiperSmall = new Swiper(sliderNav, {
+            slidesPerView: 3,
+            spaceBetween: 10,
+            loopedSlides: 3,
+            freeMode: true,
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true,
+            loop: true,
+            direction: 'vertical',
 
-        navigation: {
-            nextEl: '.product__button--next',
-            prevEl: '.product__button--prev',
-        },
-    })
+            navigation: {
+                nextEl: '.product__button--next',
+                prevEl: '.product__button--prev',
+            },
+        })
 
-    let swiperMain = new Swiper(sliderMain, {
-        spaceBetween: 10,
-        loop: true,
-        loopedSlides: 3,
+        let swiperMain = new Swiper(sliderMain, {
+            spaceBetween: 10,
+            loop: true,
+            loopedSlides: 3,
 
-        thumbs: {
-            swiper: swiperSmall,
-        },
+            thumbs: {
+                swiper: swiperSmall,
+            },
 
-        pagination: {
-            el: '.product__pagination',
-            clickable: true,
-        },
-    })
+            pagination: {
+                el: '.product__pagination',
+                clickable: true,
+            },
+        })
+    }
+
+    //Фильтры на мобильной версии
+    if (document.querySelector('.products__button')) {
+        document.querySelector('.products__button').onclick = function () {
+            document.querySelector('.filters').classList.toggle('filters--active');
+            document.querySelector('body').classList.toggle('lock');
+            document.querySelector('.blackout').classList.toggle('blackout--active');
+        };
+    }
 
     //Ответы на вопросы
-    const question = document.querySelectorAll('.accordion-card__top');
-
-    if (question) {
+    if (document.querySelectorAll('.accordion-card__top')) {
+        const question = document.querySelectorAll('.accordion-card__top');
         question.forEach(item => {
             item.addEventListener('click', () => {
                 item.parentNode.classList.toggle('accordion-card--active');
@@ -220,155 +234,143 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     //Показать все на странице товара
-    document.querySelector('.product__more--descr').onclick = function () {
-        this.classList.toggle('product__more--active');
-    };
+    if (document.querySelector('.product__more--descr')) {
+        document.querySelector('.product__more--descr').onclick = function () {
+            this.classList.toggle('product__more--active');
+        };
+    }
 
-    document.querySelector('.product__more--characteristics').onclick = function () {
-        this.classList.toggle('product__more--active');
-    };
+    if (document.querySelector('.product__more--characteristics')) {
+        document.querySelector('.product__more--characteristics').onclick = function () {
+            this.classList.toggle('product__more--active');
+        };
+    }
 
     //Свайпер в партнерах
-    const sliderLogos = document.querySelector('.swiper-logos');
-    const swiperLogos = new Swiper(sliderLogos, {
-        slidesPerView: 6,
-        slidesPerGroup: 6,
-        spaceBetween: 20,
+    if (document.querySelector('.swiper-logos')) {
+        const sliderLogos = document.querySelector('.swiper-logos');
+        const swiperLogos = new Swiper(sliderLogos, {
+            slidesPerView: 6,
+            slidesPerGroup: 6,
+            spaceBetween: 20,
 
-        pagination: {
-            el: '.logos__pagination',
-            clickable: true,
-        },
-
-        navigation: {
-            nextEl: '.logos__button--next',
-            prevEl: '.logos__button--prev',
-        },
-
-        breakpoints: {
-            1200: {
-                slidesPerView: 6,
-                slidesPerGroup: 6,
-                spaceBetween: 20,
+            pagination: {
+                el: '.logos__pagination',
+                clickable: true,
             },
 
-            993: {
-                slidesPerView: 5,
-                slidesPerGroup: 5,
-                spaceBetween: 20,
+            navigation: {
+                nextEl: '.logos__button--next',
+                prevEl: '.logos__button--prev',
             },
 
-            850: {
-                slidesPerView: 4,
-                slidesPerGroup: 4,
-                spaceBetween: 20,
-            },
+            breakpoints: {
+                1200: {
+                    slidesPerView: 6,
+                    slidesPerGroup: 6,
+                    spaceBetween: 20,
+                },
 
-            700: {
-                slidesPerView: 3,
-                slidesPerGroup: 3,
-                spaceBetween: 20,
-            },
+                993: {
+                    slidesPerView: 5,
+                    slidesPerGroup: 5,
+                    spaceBetween: 20,
+                },
 
-            320: {
-                slidesPerView: 2,
-                slidesPerGroup: 2,
-                spaceBetween: 20,
+                850: {
+                    slidesPerView: 4,
+                    slidesPerGroup: 4,
+                    spaceBetween: 20,
+                },
+
+                700: {
+                    slidesPerView: 3,
+                    slidesPerGroup: 3,
+                    spaceBetween: 20,
+                },
+
+                320: {
+                    slidesPerView: 2,
+                    slidesPerGroup: 2,
+                    spaceBetween: 20,
+                },
             },
-        },
-    });
+        });
+    }
 
     //Фильтр цены
-    const Price = document.querySelector('.filters-price__slider');
+    if (document.querySelector('.filters-price__slider')) {
+        const Price = document.querySelector('.filters-price__slider');
 
-    noUiSlider.create(Price, {
-        start: [500, 100000],
-        connect: true,
-        step: 1,
-        range: {
-            'min': [500],
-            'max': [100000]
-        }
-    });
-
-    const price_from = document.querySelector('.filters-price__field--from');
-    const price_to = document.querySelector('.filters-price__field--to');
-
-    const fields = [price_from, price_to];
-
-    Price.noUiSlider.on('update', function (values, handle) {
-        fields[handle].value = Math.round(values[handle])
-    });
-
-    const setPrice = (i, value) => {
-        let arr = [null, null];
-        arr[i] = value;
-
-        Price.noUiSlider.set(arr)
-    };
-
-    fields.forEach((el, index) => {
-        el.addEventListener('change', (e) => {
-            setPrice(index, e.currentTarget.value);
+        noUiSlider.create(Price, {
+            start: [500, 100000],
+            connect: true,
+            step: 1,
+            range: {
+                'min': [500],
+                'max': [100000]
+            }
         });
-    });
+    }
 
+    if (document.querySelector('.filters-price__field--from') & document.querySelector('.filters-price__field--to')) {
+        const price_from = document.querySelector('.filters-price__field--from');
+        const price_to = document.querySelector('.filters-price__field--to');
+
+        const fields = [price_from, price_to];
+
+        Price.noUiSlider.on('update', function (values, handle) {
+            fields[handle].value = Math.round(values[handle])
+        });
+
+        const setPrice = (i, value) => {
+            let arr = [null, null];
+            arr[i] = value;
+
+            Price.noUiSlider.set(arr)
+        };
+
+        fields.forEach((el, index) => {
+            el.addEventListener('change', (e) => {
+                setPrice(index, e.currentTarget.value);
+            });
+        });
+    }
 
     //Кнопка «Показать ещё»
-    document.querySelector('.filters__more').onclick = function () {
-        this.classList.toggle('filters__more--active');
-    };
+    if (document.querySelector('.filters__more')) {
+        document.querySelector('.filters__more').onclick = function () {
+            this.classList.toggle('filters__more--active');
+        };
+    }
 
     //Скрывать фильтры по клику на заголовок
-    const filterTitle = document.querySelectorAll('.filters__top');
-    filterTitle.forEach(item => {
-        item.addEventListener('click', () => {
-            item.parentNode.classList.toggle('filters__item--hidden');
+    if (document.querySelectorAll('.filters__top')) {
+        const filterTitle = document.querySelectorAll('.filters__top');
+        filterTitle.forEach(item => {
+            item.addEventListener('click', () => {
+                item.parentNode.classList.toggle('filters__item--hidden');
+            });
         });
-    });
+    }
 
     //Select
-    const defaultSelect = () => {
-        const element = document.querySelector('.products__list');
-        const choices = new Choices(element, {
-            searchEnabled: false,
-        });
-    };
+    if (document.querySelector('.products__list')) {
+        const defaultSelect = () => {
+            const element = document.querySelector('.products__list');
+            const choices = new Choices(element, {
+                searchEnabled: false,
+            });
+        };
 
-    defaultSelect();
+        defaultSelect();
+    }
 
-    document.querySelector('.blackout').onclick = function () {
-        document.querySelector('.filters').classList.remove('filters--active');
-        this.classList.remove('blackout--active');
-    };
-
-
-    //Фильтры на мобильной версии
-    document.querySelector('.products__button').onclick = function () {
-        document.querySelector('.filters').classList.toggle('filters--active');
-        document.querySelector('body').classList.toggle('lock');
-        document.querySelector('.blackout').classList.toggle('blackout--active');
-    };
-
-    // const questions = document.querySelectorAll('.questions__item');
-    // document.addEventListener('mousedown', (e) => {
-    //     if (!questions.contains(e.target)) {
-    //         document.querySelectorAll('.questions__item').classList.remove('questions__item--active');
-    //     }
-    // });
-
+    //Затемнение
+    if (document.querySelector('.blackout')) {
+        document.querySelector('.blackout').onclick = function () {
+            document.querySelector('.filters').classList.remove('filters--active');
+            this.classList.remove('blackout--active');
+        };
+    }
 });
-
-
-// const mediaQuery = window.matchMedia('(max-width: 992px)')
-
-// function handleTabletChange(e) {
-//     if (e.matches) {
-//         document.querySelector('.search-form__button').onclick = function () {
-//             document.querySelector('.search-form__item').classList.toggle('search-form__item--active');
-//         };
-//     };
-// };
-
-// mediaQuery.addListener(handleTabletChange)
-// handleTabletChange(mediaQuery)
