@@ -16,11 +16,11 @@
     <meta name="theme-color" content="#ffffff">
 
     <link rel="stylesheet" href="css/style.min.css">
-    <title>Сибремонттехника — ремонт бытовой техники | Страница товара</title>
+    <title>Сибремонттехника — ремонт бытовой техники | Ремонт холодильников</title>
 </head>
 
 <body>
-        <div class="wrapper">
+    <div class="wrapper wrapper--service">
 
 <header class="header  ">
     <nav class="header__navigation">
@@ -339,7 +339,7 @@
         </p>
     </div>
 </section>
-                <section class="service-price section">
+                <section class="service-price">
     <h2 class="title">
         <span class="title__accent">
             Цены 
@@ -461,17 +461,19 @@
             заказать услугу
         </h2>
         <form class="form" action="#">
-            <div class="form__item">
-                <label class="sr-only" for="service-form__name">
-                    Введите ваше имя
-                </label>
-                <input class="form__field" id="service-form__name" name="name" type="text" placeholder="Ваше имя" required>
-            </div>
-            <div class="form__item">
-                <label class="sr-only" for="service-form__tel">
-                    Введите ваше имя
-                </label>
-                <input class="form__field" id="service-form__tel" name="tel" type="tel" placeholder="Ваш номер телефона" required>
+            <div class="form__items">
+                <div class="form__item form__item--service">
+                    <label class="sr-only" for="service-form__name">
+                        Введите ваше имя
+                    </label>
+                    <input class="form__field" id="service-form__name" name="name" type="text" placeholder="Ваше имя" required>
+                </div>
+                <div class="form__item form__item--service">
+                    <label class="sr-only" for="service-form__tel">
+                        Введите ваше имя
+                    </label>
+                    <input class="form__field" id="service-form__tel" name="tel" type="tel" placeholder="Ваш номер телефона" required>
+                </div>
             </div>
             <button class="form__button button" type="submit">
                 Заказать услугу
@@ -483,7 +485,10 @@
        
     </div>
 </main>
-<section class="reviews section">
+</div>
+
+<div class="service-content">
+    <section class="reviews section">
     <div class="container">
         <h2 class="title">
             <span class="title__accent">
@@ -690,7 +695,7 @@
         </div>
     </div>
 </section>
-<section class="questions section">
+    <section class="questions section">
     <div class="container">
         <h2 class="title">
             <span class="title__accent">
@@ -843,7 +848,7 @@
         </ul>
     </div>
 </section>
-<footer class="footer">
+    <footer class="footer">
     <div class="container">
         <div class="footer__wrapper">
             <ul class="footer__left">
@@ -874,8 +879,9 @@
         </div>
     </div>
 </footer>
-</div>
+    </div>
  <script src="js/main.min.js"></script>
  </body>
 
  </html>
+</div>
