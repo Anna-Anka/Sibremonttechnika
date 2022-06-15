@@ -1,0 +1,70 @@
+.service-box {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.service-wrapper {
+    max-width: 694px;
+    width: 100%;
+    margin-right: 30px;
+}
+
+.service-title {
+    margin-bottom: 30px;
+    font-weight: $fw-700;
+    font-size: 40px;
+    font-family: $oswald;
+    line-height: 1.3;
+    text-transform: uppercase;
+
+    @include mq('phone-2') {
+        margin-bottom: 20px;
+        font-size: 34px;
+    }
+}
+
+.service-about {
+    &__text {
+        p {
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+
+.service-price {
+    &__item {
+        overflow: hidden;
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+
+.service-form {
+    background-color: $gray-100;
+    padding: 25px;
+    max-width: 387px;
+    width: 100%;
+    height: 272px;
+    position: sticky;
+    top: 0;
+    
+
+    &__title {
+        margin-bottom: 20px;
+        font-weight: $fw-500;
+        font-size: 24px;
+        font-family: $oswald;
+        line-height: 1.3;
+        text-transform: uppercase;
+    }
+
+    &__form {
+        margin-bottom: 15px;
+    }
+}

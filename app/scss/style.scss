@@ -17,6 +17,7 @@
 @import 'components/pagination';
 @import 'components/products-watch';
 @import 'components/accordion-card';
+@import 'components/characteristic-card';
 
 //Home
 @import 'home/offer';
@@ -36,3 +37,6 @@
 
 //Product 
 @import 'product/product';
+
+//Услуга 
+@import 'service/service';

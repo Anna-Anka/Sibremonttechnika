@@ -201,6 +201,24 @@ document.addEventListener("DOMContentLoaded", () => {
         },
     })
 
+    //Ответы на вопросы
+    const question = document.querySelectorAll('.accordion-card__top');
+
+    if (question) {
+        question.forEach(item => {
+            item.addEventListener('click', () => {
+                item.parentNode.classList.toggle('accordion-card--active');
+            });
+
+            item.addEventListener('mousedown', (e) => {
+                if (!item.contains(e.target)) {
+                    alert('dada');
+                    item.parentNode.classList.remove('accordion-card--active');
+                }
+            });
+        });
+    };
+
     //Показать все на странице товара
     document.querySelector('.product__more--descr').onclick = function () {
         this.classList.toggle('product__more--active');
@@ -209,21 +227,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector('.product__more--characteristics').onclick = function () {
         this.classList.toggle('product__more--active');
     };
-
-    //Ответы на вопросы
-    const question = document.querySelectorAll('.accordion-card__top');
-    question.forEach(item => {
-        item.addEventListener('click', () => {
-            item.parentNode.classList.toggle('accordion-card--active');
-        });
-
-        item.addEventListener('mousedown', (e) => {
-            if (!item.contains(e.target)) {
-                alert('dada');
-                item.parentNode.classList.remove('accordion-card--active');
-            }
-        });
-    });
 
     //Свайпер в партнерах
     const sliderLogos = document.querySelector('.swiper-logos');

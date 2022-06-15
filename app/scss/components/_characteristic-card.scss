@@ -1,0 +1,33 @@
+.characteristic {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    &::after {
+        flex-grow: 1;
+        order: 2;
+        margin: 0 5px;
+        border-bottom: 1px dashed $gray-600;
+        content: '';
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 15px;
+
+        @include mq('tablet') {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__parameter {
+        max-width: 59%;
+    }
+
+    &__meaining {
+        order: 3;
+        max-width: 39%;
+        line-height: 1.2;
+        text-align: right;
+    }
+}
+
