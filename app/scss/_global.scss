@@ -248,13 +248,16 @@ body {
     }
 
     &--active {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        display: flex;
-        width: 100%;
-        max-width: 320px;
-        transform: translateY(100%);
+        @include mq('tablet') {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            width: 100%;
+            max-width: 320px;
+            transform: translateY(100%);
+            z-index: 100;
+        }
     }
 
     &__item {
@@ -263,6 +266,7 @@ body {
 
     &__field {
         border-right: none;
+        background-color: $white;
     }
 
     &__button {
@@ -384,10 +388,6 @@ body {
         display: inline-block;
         width: 24px;
         height: 24px;
-
-        &:not(:last-child) {
-            margin-right: 3px;
-        }
     }
 }
 

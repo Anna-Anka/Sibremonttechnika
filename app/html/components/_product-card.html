@@ -1,19 +1,20 @@
-<article class="product-card">
+<article class="product-card" itemtype="https://schema.org/Product" itemscope>
     <div class="product-card__top">
         <a class="product-card__image" href="#">
-            <img class="product-card__img" src="img/products/@img.png" alt="@alt" loading="lazy" width="256" height="200">
+            <img class="product-card__img" src="img/products/@img.png" alt="@alt" loading="lazy" width="256" height="200" itemprop="image">
         </a>
         <h3 class="product-card__title">
-            <a class="product-card__link" href="#">
+            <a class="product-card__link" href="#" itemprop="name">
                 @title
             </a>
         </h3>
         <div class="product-card__info">
-            <span class="product-card__price subtitle">
-                @price ₽
+            <span class="product-card__price subtitle" itemtype="https://schema.org/Offer" itemprop="offers" itemscope>
+                <span itemprop="price">@price</span>
+                <span itemprop="priceCurrency">₽</span>
             </span>
             @if(context.rating === "5") {
-                <div class="product-card__rating rating" aria-label="Рейтинг 5 из 5">
+                <div class="product-card__rating rating" aria-label="Рейтинг 5 из 5" itemprop="aggregateRating">
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
@@ -23,7 +24,7 @@
             }
 
             @if(context.rating === "4") {
-                <div class="product-card__rating rating" aria-label="Рейтинг 4 из 5">
+                <div class="product-card__rating rating" aria-label="Рейтинг 4 из 5" itemprop="aggregateRating">
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
@@ -32,7 +33,7 @@
             }
 
             @if(context.rating === "3") {
-            <div class="product-card__rating rating" aria-label="Рейтинг 3 из 5">
+            <div class="product-card__rating rating" aria-label="Рейтинг 3 из 5" itemprop="aggregateRating">
                 <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                 <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                 <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
@@ -40,14 +41,14 @@
             }
 
             @if(context.rating === "2") {
-            <div class="product-card__rating rating" aria-label="Рейтинг 2 из 5">
+            <div class="product-card__rating rating" aria-label="Рейтинг 2 из 5" itemprop="aggregateRating">
                 <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                 <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
             </div>
             }
 
             @if(context.rating === "1") {
-            <div class="product-card__rating rating" aria-label="Рейтинг 1 из 5">
+            <div class="product-card__rating rating" aria-label="Рейтинг 1 из 5" itemprop="aggregateRating">
                 <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
             </div>
             }

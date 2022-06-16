@@ -52,7 +52,7 @@
                     </button>
                 </form>
 
-                <button class="header__mobile header__mobile--call" button="button">
+                <button class="header__mobile header__mobile--call" type="button">
                     <span class="sr-only">
                         Связаться с нами
                     </span>
@@ -294,7 +294,7 @@
             <p class="form__text">
                 Пожалуйста, оставьте свой номер телефона и мы вам перезвоним
             </p>
-            <button class="form__button modal__button button" type="sumbmit">
+            <button class="form__button modal__button button" type="submit">
                 Заказать звонок
             </button>
         </form>
@@ -334,22 +334,23 @@
 
     <ul class="search__items">
         <li class="search__item">
-            <article class="product-card">
+            <article class="product-card" itemtype="https://schema.org/Product" itemscope>
     <div class="product-card__top">
         <a class="product-card__image" href="#">
-            <img class="product-card__img" src="img/products/1.png" alt="Шланг наливной" loading="lazy" width="256" height="200">
+            <img class="product-card__img" src="img/products/1.png" alt="Шланг наливной" loading="lazy" width="256" height="200" itemprop="image">
         </a>
         <h3 class="product-card__title">
-            <a class="product-card__link" href="#">
+            <a class="product-card__link" href="#" itemprop="name">
                 Шланг наливной для стиральной машины Equation 3 м
             </a>
         </h3>
         <div class="product-card__info">
-            <span class="product-card__price subtitle">
-                950 ₽
+            <span class="product-card__price subtitle" itemtype="https://schema.org/Offer" itemprop="offers" itemscope>
+                <span itemprop="price">950</span>
+                <span itemprop="priceCurrency">₽</span>
             </span>
             
-                <div class="product-card__rating rating" aria-label="Рейтинг 5 из 5">
+                <div class="product-card__rating rating" aria-label="Рейтинг 5 из 5" itemprop="aggregateRating">
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
@@ -373,24 +374,25 @@
 </article>
         </li>
         <li class="search__item">
-            <article class="product-card">
+            <article class="product-card" itemtype="https://schema.org/Product" itemscope>
     <div class="product-card__top">
         <a class="product-card__image" href="#">
-            <img class="product-card__img" src="img/products/2.png" alt="Верхний распылитель" loading="lazy" width="256" height="200">
+            <img class="product-card__img" src="img/products/2.png" alt="Верхний распылитель" loading="lazy" width="256" height="200" itemprop="image">
         </a>
         <h3 class="product-card__title">
-            <a class="product-card__link" href="#">
+            <a class="product-card__link" href="#" itemprop="name">
                 Верхний распылитель Beko 1746200100
             </a>
         </h3>
         <div class="product-card__info">
-            <span class="product-card__price subtitle">
-                1950 ₽
+            <span class="product-card__price subtitle" itemtype="https://schema.org/Offer" itemprop="offers" itemscope>
+                <span itemprop="price">1950</span>
+                <span itemprop="priceCurrency">₽</span>
             </span>
             
 
             
-                <div class="product-card__rating rating" aria-label="Рейтинг 4 из 5">
+                <div class="product-card__rating rating" aria-label="Рейтинг 4 из 5" itemprop="aggregateRating">
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
@@ -411,22 +413,23 @@
 </article>
         </li>
         <li class="search__item">
-            <article class="product-card">
+            <article class="product-card" itemtype="https://schema.org/Product" itemscope>
     <div class="product-card__top">
         <a class="product-card__image" href="#">
-            <img class="product-card__img" src="img/products/3.png" alt="Импеллер (разбрызгиватель)" loading="lazy" width="256" height="200">
+            <img class="product-card__img" src="img/products/3.png" alt="Импеллер (разбрызгиватель)" loading="lazy" width="256" height="200" itemprop="image">
         </a>
         <h3 class="product-card__title">
-            <a class="product-card__link" href="#">
+            <a class="product-card__link" href="#" itemprop="name">
                 Импеллер (разбрызгиватель) нижний Beko 1744400200
             </a>
         </h3>
         <div class="product-card__info">
-            <span class="product-card__price subtitle">
-                5950 ₽
+            <span class="product-card__price subtitle" itemtype="https://schema.org/Offer" itemprop="offers" itemscope>
+                <span itemprop="price">5950</span>
+                <span itemprop="priceCurrency">₽</span>
             </span>
             
-                <div class="product-card__rating rating" aria-label="Рейтинг 5 из 5">
+                <div class="product-card__rating rating" aria-label="Рейтинг 5 из 5" itemprop="aggregateRating">
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
@@ -450,22 +453,23 @@
 </article>
         </li>
         <li class="search__item">
-            <article class="product-card">
+            <article class="product-card" itemtype="https://schema.org/Product" itemscope>
     <div class="product-card__top">
         <a class="product-card__image" href="#">
-            <img class="product-card__img" src="img/products/4.png" alt="Прокладка заливного шланга" loading="lazy" width="256" height="200">
+            <img class="product-card__img" src="img/products/4.png" alt="Прокладка заливного шланга" loading="lazy" width="256" height="200" itemprop="image">
         </a>
         <h3 class="product-card__title">
-            <a class="product-card__link" href="#">
+            <a class="product-card__link" href="#" itemprop="name">
                 Прокладка заливного шланга 3/4, +(сетка-фильтр), зам. 005781
             </a>
         </h3>
         <div class="product-card__info">
-            <span class="product-card__price subtitle">
-                5950 ₽
+            <span class="product-card__price subtitle" itemtype="https://schema.org/Offer" itemprop="offers" itemscope>
+                <span itemprop="price">5950</span>
+                <span itemprop="priceCurrency">₽</span>
             </span>
             
-                <div class="product-card__rating rating" aria-label="Рейтинг 5 из 5">
+                <div class="product-card__rating rating" aria-label="Рейтинг 5 из 5" itemprop="aggregateRating">
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
@@ -489,22 +493,23 @@
 </article>
         </li>
         <li class="search__item">
-            <article class="product-card">
+            <article class="product-card" itemtype="https://schema.org/Product" itemscope>
     <div class="product-card__top">
         <a class="product-card__image" href="#">
-            <img class="product-card__img" src="img/products/1.png" alt="Шланг наливной" loading="lazy" width="256" height="200">
+            <img class="product-card__img" src="img/products/1.png" alt="Шланг наливной" loading="lazy" width="256" height="200" itemprop="image">
         </a>
         <h3 class="product-card__title">
-            <a class="product-card__link" href="#">
+            <a class="product-card__link" href="#" itemprop="name">
                 Шланг наливной для стиральной машины Equation 3 м
             </a>
         </h3>
         <div class="product-card__info">
-            <span class="product-card__price subtitle">
-                950 ₽
+            <span class="product-card__price subtitle" itemtype="https://schema.org/Offer" itemprop="offers" itemscope>
+                <span itemprop="price">950</span>
+                <span itemprop="priceCurrency">₽</span>
             </span>
             
-                <div class="product-card__rating rating" aria-label="Рейтинг 5 из 5">
+                <div class="product-card__rating rating" aria-label="Рейтинг 5 из 5" itemprop="aggregateRating">
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
@@ -528,24 +533,25 @@
 </article>
         </li>
         <li class="search__item">
-            <article class="product-card">
+            <article class="product-card" itemtype="https://schema.org/Product" itemscope>
     <div class="product-card__top">
         <a class="product-card__image" href="#">
-            <img class="product-card__img" src="img/products/2.png" alt="Верхний распылитель" loading="lazy" width="256" height="200">
+            <img class="product-card__img" src="img/products/2.png" alt="Верхний распылитель" loading="lazy" width="256" height="200" itemprop="image">
         </a>
         <h3 class="product-card__title">
-            <a class="product-card__link" href="#">
+            <a class="product-card__link" href="#" itemprop="name">
                 Верхний распылитель Beko 1746200100
             </a>
         </h3>
         <div class="product-card__info">
-            <span class="product-card__price subtitle">
-                1950 ₽
+            <span class="product-card__price subtitle" itemtype="https://schema.org/Offer" itemprop="offers" itemscope>
+                <span itemprop="price">1950</span>
+                <span itemprop="priceCurrency">₽</span>
             </span>
             
 
             
-                <div class="product-card__rating rating" aria-label="Рейтинг 4 из 5">
+                <div class="product-card__rating rating" aria-label="Рейтинг 4 из 5" itemprop="aggregateRating">
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
@@ -566,22 +572,23 @@
 </article>
         </li>
         <li class="search__item">
-            <article class="product-card">
+            <article class="product-card" itemtype="https://schema.org/Product" itemscope>
     <div class="product-card__top">
         <a class="product-card__image" href="#">
-            <img class="product-card__img" src="img/products/3.png" alt="Импеллер (разбрызгиватель)" loading="lazy" width="256" height="200">
+            <img class="product-card__img" src="img/products/3.png" alt="Импеллер (разбрызгиватель)" loading="lazy" width="256" height="200" itemprop="image">
         </a>
         <h3 class="product-card__title">
-            <a class="product-card__link" href="#">
+            <a class="product-card__link" href="#" itemprop="name">
                 Импеллер (разбрызгиватель) нижний Beko 1744400200
             </a>
         </h3>
         <div class="product-card__info">
-            <span class="product-card__price subtitle">
-                5950 ₽
+            <span class="product-card__price subtitle" itemtype="https://schema.org/Offer" itemprop="offers" itemscope>
+                <span itemprop="price">5950</span>
+                <span itemprop="priceCurrency">₽</span>
             </span>
             
-                <div class="product-card__rating rating" aria-label="Рейтинг 5 из 5">
+                <div class="product-card__rating rating" aria-label="Рейтинг 5 из 5" itemprop="aggregateRating">
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
@@ -605,22 +612,23 @@
 </article>
         </li>
         <li class="search__item">
-            <article class="product-card">
+            <article class="product-card" itemtype="https://schema.org/Product" itemscope>
     <div class="product-card__top">
         <a class="product-card__image" href="#">
-            <img class="product-card__img" src="img/products/4.png" alt="Прокладка заливного шланга" loading="lazy" width="256" height="200">
+            <img class="product-card__img" src="img/products/4.png" alt="Прокладка заливного шланга" loading="lazy" width="256" height="200" itemprop="image">
         </a>
         <h3 class="product-card__title">
-            <a class="product-card__link" href="#">
+            <a class="product-card__link" href="#" itemprop="name">
                 Прокладка заливного шланга 3/4, +(сетка-фильтр), зам. 005781
             </a>
         </h3>
         <div class="product-card__info">
-            <span class="product-card__price subtitle">
-                5950 ₽
+            <span class="product-card__price subtitle" itemtype="https://schema.org/Offer" itemprop="offers" itemscope>
+                <span itemprop="price">5950</span>
+                <span itemprop="priceCurrency">₽</span>
             </span>
             
-                <div class="product-card__rating rating" aria-label="Рейтинг 5 из 5">
+                <div class="product-card__rating rating" aria-label="Рейтинг 5 из 5" itemprop="aggregateRating">
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
@@ -701,22 +709,23 @@
             <div class="products-watch__swiper swiper">
                 <ul class="products-watch__items swiper-wrapper">
                     <li class="products-watch__item swiper-slide">
-                        <article class="product-card">
+                        <article class="product-card" itemtype="https://schema.org/Product" itemscope>
     <div class="product-card__top">
         <a class="product-card__image" href="#">
-            <img class="product-card__img" src="img/products/1.png" alt="Шланг наливной" loading="lazy" width="256" height="200">
+            <img class="product-card__img" src="img/products/1.png" alt="Шланг наливной" loading="lazy" width="256" height="200" itemprop="image">
         </a>
         <h3 class="product-card__title">
-            <a class="product-card__link" href="#">
+            <a class="product-card__link" href="#" itemprop="name">
                 Шланг наливной для стиральной машины Equation 3 м
             </a>
         </h3>
         <div class="product-card__info">
-            <span class="product-card__price subtitle">
-                950 ₽
+            <span class="product-card__price subtitle" itemtype="https://schema.org/Offer" itemprop="offers" itemscope>
+                <span itemprop="price">950</span>
+                <span itemprop="priceCurrency">₽</span>
             </span>
             
-                <div class="product-card__rating rating" aria-label="Рейтинг 5 из 5">
+                <div class="product-card__rating rating" aria-label="Рейтинг 5 из 5" itemprop="aggregateRating">
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
@@ -740,24 +749,25 @@
 </article>
                     </li>
                     <li class="products-watch__item swiper-slide">
-                        <article class="product-card">
+                        <article class="product-card" itemtype="https://schema.org/Product" itemscope>
     <div class="product-card__top">
         <a class="product-card__image" href="#">
-            <img class="product-card__img" src="img/products/2.png" alt="Верхний распылитель" loading="lazy" width="256" height="200">
+            <img class="product-card__img" src="img/products/2.png" alt="Верхний распылитель" loading="lazy" width="256" height="200" itemprop="image">
         </a>
         <h3 class="product-card__title">
-            <a class="product-card__link" href="#">
+            <a class="product-card__link" href="#" itemprop="name">
                 Верхний распылитель Beko 1746200100
             </a>
         </h3>
         <div class="product-card__info">
-            <span class="product-card__price subtitle">
-                1950 ₽
+            <span class="product-card__price subtitle" itemtype="https://schema.org/Offer" itemprop="offers" itemscope>
+                <span itemprop="price">1950</span>
+                <span itemprop="priceCurrency">₽</span>
             </span>
             
 
             
-                <div class="product-card__rating rating" aria-label="Рейтинг 4 из 5">
+                <div class="product-card__rating rating" aria-label="Рейтинг 4 из 5" itemprop="aggregateRating">
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
@@ -778,22 +788,23 @@
 </article>
                     </li>
                     <li class="products-watch__item swiper-slide">
-                        <article class="product-card">
+                        <article class="product-card" itemtype="https://schema.org/Product" itemscope>
     <div class="product-card__top">
         <a class="product-card__image" href="#">
-            <img class="product-card__img" src="img/products/3.png" alt="Импеллер (разбрызгиватель)" loading="lazy" width="256" height="200">
+            <img class="product-card__img" src="img/products/3.png" alt="Импеллер (разбрызгиватель)" loading="lazy" width="256" height="200" itemprop="image">
         </a>
         <h3 class="product-card__title">
-            <a class="product-card__link" href="#">
+            <a class="product-card__link" href="#" itemprop="name">
                 Импеллер (разбрызгиватель) нижний Beko 1744400200
             </a>
         </h3>
         <div class="product-card__info">
-            <span class="product-card__price subtitle">
-                5950 ₽
+            <span class="product-card__price subtitle" itemtype="https://schema.org/Offer" itemprop="offers" itemscope>
+                <span itemprop="price">5950</span>
+                <span itemprop="priceCurrency">₽</span>
             </span>
             
-                <div class="product-card__rating rating" aria-label="Рейтинг 5 из 5">
+                <div class="product-card__rating rating" aria-label="Рейтинг 5 из 5" itemprop="aggregateRating">
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
@@ -817,22 +828,23 @@
 </article>
                     </li>
                     <li class="products-watch__item swiper-slide">
-                        <article class="product-card">
+                        <article class="product-card" itemtype="https://schema.org/Product" itemscope>
     <div class="product-card__top">
         <a class="product-card__image" href="#">
-            <img class="product-card__img" src="img/products/4.png" alt="Прокладка заливного шланга" loading="lazy" width="256" height="200">
+            <img class="product-card__img" src="img/products/4.png" alt="Прокладка заливного шланга" loading="lazy" width="256" height="200" itemprop="image">
         </a>
         <h3 class="product-card__title">
-            <a class="product-card__link" href="#">
+            <a class="product-card__link" href="#" itemprop="name">
                 Прокладка заливного шланга 3/4, +(сетка-фильтр), зам. 005781
             </a>
         </h3>
         <div class="product-card__info">
-            <span class="product-card__price subtitle">
-                5950 ₽
+            <span class="product-card__price subtitle" itemtype="https://schema.org/Offer" itemprop="offers" itemscope>
+                <span itemprop="price">5950</span>
+                <span itemprop="priceCurrency">₽</span>
             </span>
             
-                <div class="product-card__rating rating" aria-label="Рейтинг 5 из 5">
+                <div class="product-card__rating rating" aria-label="Рейтинг 5 из 5" itemprop="aggregateRating">
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
@@ -856,22 +868,23 @@
 </article>
                     </li>
                     <li class="products-watch__item swiper-slide">
-                        <article class="product-card">
+                        <article class="product-card" itemtype="https://schema.org/Product" itemscope>
     <div class="product-card__top">
         <a class="product-card__image" href="#">
-            <img class="product-card__img" src="img/products/1.png" alt="Шланг наливной" loading="lazy" width="256" height="200">
+            <img class="product-card__img" src="img/products/1.png" alt="Шланг наливной" loading="lazy" width="256" height="200" itemprop="image">
         </a>
         <h3 class="product-card__title">
-            <a class="product-card__link" href="#">
+            <a class="product-card__link" href="#" itemprop="name">
                 Шланг наливной для стиральной машины Equation 3 м
             </a>
         </h3>
         <div class="product-card__info">
-            <span class="product-card__price subtitle">
-                950 ₽
+            <span class="product-card__price subtitle" itemtype="https://schema.org/Offer" itemprop="offers" itemscope>
+                <span itemprop="price">950</span>
+                <span itemprop="priceCurrency">₽</span>
             </span>
             
-                <div class="product-card__rating rating" aria-label="Рейтинг 5 из 5">
+                <div class="product-card__rating rating" aria-label="Рейтинг 5 из 5" itemprop="aggregateRating">
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>

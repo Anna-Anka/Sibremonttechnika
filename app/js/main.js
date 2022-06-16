@@ -94,6 +94,14 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+    document.querySelector('.header__mobile--search').onclick = function () {
+        document.querySelector('.header__call--active').classList.remove('header__call--active')
+    }
+
+    document.querySelector('.header__mobile--call').onclick = function () {
+        document.querySelector('.search-form--active').classList.remove('search-form--active')
+    }
+
     //Слайдер в отзывах
     if (document.querySelector('.swiper-reviews')) {
         const sliderReviews = document.querySelector('.swiper-reviews');
