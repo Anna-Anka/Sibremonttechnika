@@ -9,15 +9,17 @@
 
 <div class="breadcrums breadcrums--gray">
     <div class="container">
-        <ul class="breadcrums__items">
-            <li class="breadcrums__item">
-                <a class="breadcrums__link" href="#">
-                    Главная
+        <ul class="breadcrums__items" itemtype="https://schema.org/BreadcrumbList" itemscope>
+            <li class="breadcrums__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a class="breadcrums__link" href="#" itemprop="item">
+                    <span itemprop="name">Главная</span>
+                    <meta itemprop="position" content="0">
                 </a>
             </li>
-            <li class="breadcrums__item">
-                <a class="breadcrums__link" href="#">
-                    Каталог
+            <li class="breadcrums__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a class="breadcrums__link" href="#" itemprop="item">
+                    <span itemprop="name">Каталог</span>
+                    <meta itemprop="position" content="1">
                 </a>
             </li>
             <li class="breadcrums__item">

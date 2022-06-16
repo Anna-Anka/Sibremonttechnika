@@ -301,12 +301,14 @@
     </div>
 </section>
 <div class="blackout"></div>
+
 <div class="breadcrums breadcrums--gray">
     <div class="container">
-        <ul class="breadcrums__items">
-            <li class="breadcrums__item">
-                <a class="breadcrums__link" href="#">
-                    Главная
+        <ul class="breadcrums__items" itemtype="https://schema.org/BreadcrumbList" itemscope>
+            <li class="breadcrums__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a class="breadcrums__link" href="#" itemprop="item">
+                    <span itemprop="name">Главная</span>
+                    <meta itemprop="position" content="0">
                 </a>
             </li>
             <li class="breadcrums__item">
@@ -513,8 +515,8 @@
         <a class="product-card__image" href="#">
             <img class="product-card__img" src="img/products/1.png" alt="Шланг наливной" loading="lazy" width="256" height="200" itemprop="image">
         </a>
-        <h3 class="product-card__title">
-            <a class="product-card__link" href="#" itemprop="name">
+        <h3 class="product-card__title" itemprop="name">
+            <a class="product-card__link" href="#">
                 Шланг наливной для стиральной машины Equation 3 м
             </a>
         </h3>
@@ -524,7 +526,11 @@
                 <span itemprop="priceCurrency">₽</span>
             </span>
             
-                <div class="product-card__rating rating" aria-label="Рейтинг 5 из 5" itemprop="aggregateRating">
+                <div class="product-card__rating rating" aria-label="Рейтинг 5 из 5" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                    <meta itemprop="ratingValue" content="5">
+                    <meta itemprop="bestRating" content="5">
+                    <meta itemprop="worstRating" content="1">
+                    <meta itemprop="reviewCount" content="11">
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
@@ -554,8 +560,8 @@
         <a class="product-card__image" href="#">
             <img class="product-card__img" src="img/products/2.png" alt="Верхний распылитель" loading="lazy" width="256" height="200" itemprop="image">
         </a>
-        <h3 class="product-card__title">
-            <a class="product-card__link" href="#" itemprop="name">
+        <h3 class="product-card__title" itemprop="name">
+            <a class="product-card__link" href="#">
                 Верхний распылитель Beko 1746200100
             </a>
         </h3>
@@ -567,7 +573,11 @@
             
 
             
-                <div class="product-card__rating rating" aria-label="Рейтинг 4 из 5" itemprop="aggregateRating">
+                <div class="product-card__rating rating" aria-label="Рейтинг 4 из 5" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                    <meta itemprop="ratingValue" content="4">
+                    <meta itemprop="bestRating" content="5">
+                    <meta itemprop="worstRating" content="1">
+                    <meta itemprop="reviewCount" content="11">
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
@@ -594,8 +604,8 @@
         <a class="product-card__image" href="#">
             <img class="product-card__img" src="img/products/3.png" alt="Импеллер (разбрызгиватель)" loading="lazy" width="256" height="200" itemprop="image">
         </a>
-        <h3 class="product-card__title">
-            <a class="product-card__link" href="#" itemprop="name">
+        <h3 class="product-card__title" itemprop="name">
+            <a class="product-card__link" href="#">
                 Импеллер (разбрызгиватель) нижний Beko 1744400200
             </a>
         </h3>
@@ -605,7 +615,11 @@
                 <span itemprop="priceCurrency">₽</span>
             </span>
             
-                <div class="product-card__rating rating" aria-label="Рейтинг 5 из 5" itemprop="aggregateRating">
+                <div class="product-card__rating rating" aria-label="Рейтинг 5 из 5" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                    <meta itemprop="ratingValue" content="5">
+                    <meta itemprop="bestRating" content="5">
+                    <meta itemprop="worstRating" content="1">
+                    <meta itemprop="reviewCount" content="11">
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
@@ -635,8 +649,8 @@
         <a class="product-card__image" href="#">
             <img class="product-card__img" src="img/products/4.png" alt="Прокладка заливного шланга" loading="lazy" width="256" height="200" itemprop="image">
         </a>
-        <h3 class="product-card__title">
-            <a class="product-card__link" href="#" itemprop="name">
+        <h3 class="product-card__title" itemprop="name">
+            <a class="product-card__link" href="#">
                 Прокладка заливного шланга 3/4, +(сетка-фильтр), зам. 005781
             </a>
         </h3>
@@ -646,7 +660,11 @@
                 <span itemprop="priceCurrency">₽</span>
             </span>
             
-                <div class="product-card__rating rating" aria-label="Рейтинг 5 из 5" itemprop="aggregateRating">
+                <div class="product-card__rating rating" aria-label="Рейтинг 5 из 5" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                    <meta itemprop="ratingValue" content="5">
+                    <meta itemprop="bestRating" content="5">
+                    <meta itemprop="worstRating" content="1">
+                    <meta itemprop="reviewCount" content="11">
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
@@ -676,8 +694,8 @@
         <a class="product-card__image" href="#">
             <img class="product-card__img" src="img/products/5.png" alt="Шланг заливной" loading="lazy" width="256" height="200" itemprop="image">
         </a>
-        <h3 class="product-card__title">
-            <a class="product-card__link" href="#" itemprop="name">
+        <h3 class="product-card__title" itemprop="name">
+            <a class="product-card__link" href="#">
                 Шланг заливной для ПММ с клапаном Аквастоп Indesit 372679/256554/037207
             </a>
         </h3>
@@ -687,7 +705,11 @@
                 <span itemprop="priceCurrency">₽</span>
             </span>
             
-                <div class="product-card__rating rating" aria-label="Рейтинг 5 из 5" itemprop="aggregateRating">
+                <div class="product-card__rating rating" aria-label="Рейтинг 5 из 5" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                    <meta itemprop="ratingValue" content="5">
+                    <meta itemprop="bestRating" content="5">
+                    <meta itemprop="worstRating" content="1">
+                    <meta itemprop="reviewCount" content="11">
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
@@ -717,8 +739,8 @@
         <a class="product-card__image" href="#">
             <img class="product-card__img" src="img/products/3.png" alt="Импеллер (разбрызгиватель)" loading="lazy" width="256" height="200" itemprop="image">
         </a>
-        <h3 class="product-card__title">
-            <a class="product-card__link" href="#" itemprop="name">
+        <h3 class="product-card__title" itemprop="name">
+            <a class="product-card__link" href="#">
                 Импеллер (разбрызгиватель) нижний Beko 1744400200
             </a>
         </h3>
@@ -728,7 +750,11 @@
                 <span itemprop="priceCurrency">₽</span>
             </span>
             
-                <div class="product-card__rating rating" aria-label="Рейтинг 5 из 5" itemprop="aggregateRating">
+                <div class="product-card__rating rating" aria-label="Рейтинг 5 из 5" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                    <meta itemprop="ratingValue" content="5">
+                    <meta itemprop="bestRating" content="5">
+                    <meta itemprop="worstRating" content="1">
+                    <meta itemprop="reviewCount" content="11">
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
