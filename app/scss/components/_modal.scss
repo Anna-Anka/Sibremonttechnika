@@ -1,16 +1,16 @@
 .modal {
+    position: absolute;
     visibility: hidden;
     opacity: 0;
-    position: absolute;
 
     &__content {
         position: relative;
+        top: -30%;
         max-width: 387px;
         height: auto;
         padding: 25px;
         background-color: $white;
-        transform: scale(1.3);
-        transition: transform 0.7s;
+        transition: top 0.5s;
     }
 
     &__title {
@@ -31,6 +31,7 @@
         right: 10px;
         width: 28px;
         height: 28px;
+        transition: filter 0.3s, opacity 0.3s, box-shadow 0.3s;
 
         &::before {
             position: absolute;
@@ -49,7 +50,7 @@
         }
 
         &:hover {
-            fill: $blue-400;
+           filter: invert(37%) sepia(63%) saturate(1943%) hue-rotate(189deg) brightness(94%) contrast(83%);
         }
 
         &:active {
@@ -69,13 +70,12 @@
         height: 100vh;
         overflow-y: auto;
         background-color: rgba($dark-800, 0.6);
-        transform: scale(1);
         visibility: visible;
         opacity: 1;
         transition: visiblity 0.3s;
 
         .modal__content {
-            transform: scale(1);
+            top: 0;
         }
     }
 }

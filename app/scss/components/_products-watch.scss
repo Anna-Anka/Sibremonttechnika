@@ -25,6 +25,11 @@
         height: unset;
     }
 
+    .swiper-backface-hidden .swiper-slide {
+        transform: none; 
+        backface-visibility: unset; 
+    }
+
     .swiper-button-disabled {
         @include swiper-button-disabled;
     }

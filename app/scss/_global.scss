@@ -65,6 +65,10 @@ body {
         border: 2px solid $blue-400;
         transition: box-shadow 0.5s, opacity 0.4s, color 0.4s;
 
+        &:focus {
+            color: $white;
+        }
+
         &:hover {
             color: $white;
             box-shadow: inset 30em 0 $blue-400;
@@ -252,11 +256,11 @@ body {
             position: absolute;
             right: 0;
             bottom: 0;
+            z-index: 100;
             display: flex;
             width: 100%;
             max-width: 320px;
             transform: translateY(100%);
-            z-index: 100;
         }
     }
 
@@ -265,8 +269,8 @@ body {
     }
 
     &__field {
-        border-right: none;
         background-color: $white;
+        border-right: none;
     }
 
     &__button {

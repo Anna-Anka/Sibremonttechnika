@@ -20,8 +20,8 @@
     margin-right: 30px;
 
     @include mq ('tablet-2') {
-        margin-bottom: 50px;
         max-width: 100%;
+        margin-bottom: 50px;
     }
 
     @include mq ('phone-2') {
@@ -76,10 +76,13 @@
 
     @include mq ('tablet-2') {
         max-width: 100%;
-        padding: 20px 15px;
         height: auto;
+        padding: 20px 15px;
     }
     
+    .form {
+        position: relative;
+    }
 
     &__title {
         margin-bottom: 20px;
