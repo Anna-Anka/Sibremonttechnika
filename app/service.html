@@ -307,13 +307,16 @@
             <li class="breadcrums__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                 <a class="breadcrums__link" href="#" itemprop="item">
                     <span itemprop="name">Главная</span>
-                    <meta itemprop="position" content="0">
                 </a>
+                <meta itemprop="position" content="0">
             </li>
-            <li class="breadcrums__item">
-                <span class="breadcrums__link">
-                    Ремонт холодильников
-                </span>
+            <li class="breadcrums__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a class="breadcrums__link" itemprop="item">
+                    <span itemprop="name">
+                        Ремонт холодильников
+                    </span>
+                </a>
+                <meta itemprop="position" content="1">
             </li>
         </ul>
     </div>
@@ -322,15 +325,15 @@
 <main class="main">
     <div class="container">
         <div class="service-box">
-            <div class="service-wrapper">
-                <h1 class="service-title">
+            <div class="service-wrapper" itemscope itemtype="http://schema.org/Product">
+                <h1 class="service-title" itemprop="name">
                     ремонт Холодильников
                 </h1>
                 <section class="service-about section">
     <h2 class="sr-only">
         Об услуге
     </h2>
-    <div class="service-about__text">
+    <div class="service-about__text" itemprop="description">
         <p>
             Верхний распылитель Beko 1746200100 — необходимый компонент для посудомоечных машин, который можно купить в нашем интернет-магазине Zip161 по отличной цене с доставкой по всей России.
         </p>
@@ -347,7 +350,12 @@
         </span>
         на услуги
     </h2>
-
+    <div itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer">
+        <meta itemprop="priceCurrency" content="RUB">
+        <meta itemprop="lowPrice" content="600">
+        <meta itemprop="highPrice" content="600">
+        <link itemprop="availability" href="http://schema.org/InStock">
+    </div>
     <ul class="service-price__items">
         <li class="service-price__item">
            <article class="accordion-card accordion-card--active">
@@ -476,7 +484,7 @@
                     <input class="form__field" id="service-form__tel" name="tel" type="tel" placeholder="Ваш номер телефона" required>
                 </div>
             </div>
-            <button class="form__button button" type="submit">
+            <button class="form__button form__button--service button" type="submit">
                 Заказать услугу
             </button>
         </form>
@@ -499,21 +507,31 @@
 
         <div class="reviews__wrapper">
             <div class="swiper-reviews swiper">
-                <ul class="reviews__list swiper-wrapper">
-                    <li class="reviews__item swiper-slide">
-                        <article class="reviews-card">
-                            <div class="reviews-card__content" >
-                                <div class="rating reviews-card__rating" aria-label="Рейтинг 5 из 5">
+                <ul class="reviews__list swiper-wrapper" itemscope itemtype="http://schema.org/ItemList">
+                    <li class="reviews__item swiper-slide" itemprop="itemListElement">
+                        <article class="reviews-card" itemscope itemtype="http://schema.org/Review">
+                            <div class="reviews-card__content">
+                                <div class="rating reviews-card__rating" aria-label="Рейтинг 5 из 5" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+                                    <meta itemprop="worstRating" content="1">
+                                    <meta itemprop="bestRating" content="5">
+                                    <meta itemprop="ratingValue" content="5">
                                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                                 </div>
-                                <h3 class="reviews-card__title subtitle">
+                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Product">
+                                    <meta itemprop="name" content="Стиральная машина">
+                                    <span itemtype="https://schema.org/Offer" itemprop="offers" itemscope>
+                                        <meta itemprop="price" content="650">
+                                        <meta itemprop="priceCurrency" content="RUB">
+                                    </span>
+                                </div>
+                                <h3 class="reviews-card__title subtitle" itemprop="name">
                                     Качественно стирает
                                 </h3>
-                                <div class="reviews-card__text">
+                                <div class="reviews-card__text" itemprop="reviewBody">
                                     <p>
                                         Тихо работает. Качественно стирает. Много режимов в том числе есть которого нет отдельно в LG: Слив. Инверторный двигатель.
                                     </p>
@@ -521,164 +539,210 @@
                                         Недостатком является только политика, которая привела к курсу доллара такому Недостатком является только…
                                     </p>
                                 </div>
-                                <a class="reviews-card__link" href="#">
+                                <a class="reviews-card__link" href="#" itemprop="url">
                                     Читать дальше
                                 </a>
                             </div>
                             <div class="reviews-card__bottom">
-                                <span class="review-card__name">
+                                <span class="review-card__name" itemprop="author">
                                     Николай
                                 </span>
-                                <time class="review-card__date" datetime="2022-05-23">
+                                <time class="review-card__date" datetime="2022-05-23" itemprop="datePublished">
                                     27.05.2020
                                 </time>
                             </div>
                         </article>
                     </li>
 
-                    <li class="reviews__item swiper-slide">
-                        <article class="reviews-card">
+                    <li class="reviews__item swiper-slide" itemprop="itemListElement">
+                        <article class="reviews-card" itemscope itemtype="http://schema.org/Review">
                             <div class="reviews-card__content">
-                                <div class="rating reviews-card__rating" aria-label="Рейтинг 4 из 5">
+                                <div class="rating reviews-card__rating" aria-label="Рейтинг 4 из 5" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+                                    <meta itemprop="worstRating" content="1">
+                                    <meta itemprop="bestRating" content="5">
+                                    <meta itemprop="ratingValue" content="5">
                                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                                 </div>
-                                <h3 class="reviews-card__title subtitle">
+                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Product">
+                                    <meta itemprop="name" content="Стиральная машина">
+                                    <span itemtype="https://schema.org/Offer" itemprop="offers" itemscope>
+                                        <meta itemprop="price" content="650">
+                                        <meta itemprop="priceCurrency" content="RUB">
+                                    </span>
+                                </div>
+                                <h3 class="reviews-card__title subtitle" itemprop="name">
                                     Качественно стирает
                                 </h3>
-                                <div class="reviews-card__text">
+                                <div class="reviews-card__text" itemprop="reviewBody">
                                     <p>
                                         Тихо работает. Качественно стирает. Много режимов в том числе есть которого нет отдельно в LG: Слив. Инверторный двигатель.
                                     </p>
                                 </div>
                             </div>
                             <div class="reviews-card__bottom">
-                                <span class="review-card__name">
+                                <span class="review-card__name" itemprop="author">
                                     Николай
                                 </span>
-                                <time class="review-card__date" datetime="2022-05-27">
+                                <time class="review-card__date" datetime="2022-05-23" itemprop="datePublished">
+                                    27.05.2020
+                                </time>
+                            </div>
+                        </article>
+                    </li>
+                    
+                    <li class="reviews__item swiper-slide" itemprop="itemListElement">
+                        <article class="reviews-card" itemscope itemtype="http://schema.org/Review">
+                            <div class="reviews-card__content">
+                                <div class="rating reviews-card__rating" aria-label="Рейтинг 4 из 5" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+                                    <meta itemprop="worstRating" content="1">
+                                    <meta itemprop="bestRating" content="5">
+                                    <meta itemprop="ratingValue" content="5">
+                                    <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
+                                    <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
+                                    <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
+                                    <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
+                                </div>
+                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Product">
+                                    <meta itemprop="name" content="Стиральная машина">
+                                    <span itemtype="https://schema.org/Offer" itemprop="offers" itemscope>
+                                        <meta itemprop="price" content="650">
+                                        <meta itemprop="priceCurrency" content="RUB">
+                                    </span>
+                                </div>
+                                <h3 class="reviews-card__title subtitle" itemprop="name">
+                                    Качественно стирает
+                                </h3>
+                                <div class="reviews-card__text" itemprop="reviewBody">
+                                    <p>
+                                        Тихо работает. Качественно стирает. Много режимов в том числе есть которого нет отдельно в LG: Слив. Инверторный двигатель.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="reviews-card__bottom">
+                                <span class="review-card__name" itemprop="author">
+                                    Николай
+                                </span>
+                                <time class="review-card__date" datetime="2022-05-23" itemprop="datePublished">
                                     27.05.2020
                                 </time>
                             </div>
                         </article>
                     </li>
 
-                    <li class="reviews__item swiper-slide">
-                        <article class="reviews-card">
+                    <li class="reviews__item swiper-slide" itemprop="itemListElement">
+                        <article class="reviews-card" itemscope itemtype="http://schema.org/Review">
                             <div class="reviews-card__content">
-                                <div class="rating reviews-card__rating" aria-label="Рейтинг 4 из 5">
+                                <div class="rating reviews-card__rating" aria-label="Рейтинг 4 из 5" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+                                    <meta itemprop="worstRating" content="1">
+                                    <meta itemprop="bestRating" content="5">
+                                    <meta itemprop="ratingValue" content="5">
                                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                                 </div>
-                                <h3 class="reviews-card__title subtitle">
+                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Product">
+                                    <meta itemprop="name" content="Стиральная машина">
+                                    <span itemtype="https://schema.org/Offer" itemprop="offers" itemscope>
+                                        <meta itemprop="price" content="650">
+                                        <meta itemprop="priceCurrency" content="RUB">
+                                    </span>
+                                </div>
+                                <h3 class="reviews-card__title subtitle" itemprop="name">
                                     Качественно стирает
                                 </h3>
-                                <div class="reviews-card__text">
+                                <div class="reviews-card__text" itemprop="reviewBody">
                                     <p>
                                         Тихо работает. Качественно стирает. Много режимов в том числе есть которого нет отдельно в LG: Слив. Инверторный двигатель.
                                     </p>
-
                                 </div>
                             </div>
                             <div class="reviews-card__bottom">
-                                <span class="review-card__name">
+                                <span class="review-card__name" itemprop="author">
                                     Николай
                                 </span>
-                                <time class="review-card__date" datetime="2022-05-23">
+                                <time class="review-card__date" datetime="2022-05-23" itemprop="datePublished">
                                     27.05.2020
                                 </time>
                             </div>
                         </article>
                     </li>
 
-                    <li class="reviews__item swiper-slide">
-                        <article class="reviews-card">
+                    <li class="reviews__item swiper-slide" itemprop="itemListElement">
+                        <article class="reviews-card" itemscope itemtype="http://schema.org/Review">
                             <div class="reviews-card__content">
-                                <div class="rating reviews-card__rating" aria-label="Рейтинг 4 из 5">
+                                <div class="rating reviews-card__rating" aria-label="Рейтинг 4 из 5" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+                                    <meta itemprop="worstRating" content="1">
+                                    <meta itemprop="bestRating" content="5">
+                                    <meta itemprop="ratingValue" content="5">
                                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                                 </div>
-                                <h3 class="reviews-card__title subtitle">
+                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Product">
+                                    <meta itemprop="name" content="Стиральная машина">
+                                    <span itemtype="https://schema.org/Offer" itemprop="offers" itemscope>
+                                        <meta itemprop="price" content="650">
+                                        <meta itemprop="priceCurrency" content="RUB">
+                                    </span>
+                                </div>
+                                <h3 class="reviews-card__title subtitle" itemprop="name">
                                     Качественно стирает
                                 </h3>
-                                <div class="reviews-card__text">
+                                <div class="reviews-card__text" itemprop="reviewBody">
                                     <p>
                                         Тихо работает. Качественно стирает. Много режимов в том числе есть которого нет отдельно в LG: Слив. Инверторный двигатель.
                                     </p>
-
                                 </div>
                             </div>
                             <div class="reviews-card__bottom">
-                                <span class="review-card__name">
+                                <span class="review-card__name" itemprop="author">
                                     Николай
                                 </span>
-                                <time class="review-card__date" datetime="2022-05-23">
+                                <time class="review-card__date" datetime="2022-05-23" itemprop="datePublished">
                                     27.05.2020
                                 </time>
                             </div>
                         </article>
                     </li>
 
-                    <li class="reviews__item swiper-slide">
-                        <article class="reviews-card">
+                    <li class="reviews__item swiper-slide" itemprop="itemListElement">
+                        <article class="reviews-card" itemscope itemtype="http://schema.org/Review">
                             <div class="reviews-card__content">
-                                <div class="rating reviews-card__rating" aria-label="Рейтинг 4 из 5">
+                                <div class="rating reviews-card__rating" aria-label="Рейтинг 4 из 5" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+                                    <meta itemprop="worstRating" content="1">
+                                    <meta itemprop="bestRating" content="5">
+                                    <meta itemprop="ratingValue" content="5">
                                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                                     <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
                                 </div>
-                                <h3 class="reviews-card__title subtitle">
+                                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Product">
+                                    <meta itemprop="name" content="Стиральная машина">
+                                    <span itemtype="https://schema.org/Offer" itemprop="offers" itemscope>
+                                        <meta itemprop="price" content="650">
+                                        <meta itemprop="priceCurrency" content="RUB">
+                                    </span>
+                                </div>
+                                <h3 class="reviews-card__title subtitle" itemprop="name">
                                     Качественно стирает
                                 </h3>
-                                <div class="reviews-card__text">
+                                <div class="reviews-card__text" itemprop="reviewBody">
                                     <p>
                                         Тихо работает. Качественно стирает. Много режимов в том числе есть которого нет отдельно в LG: Слив. Инверторный двигатель.
                                     </p>
-
                                 </div>
                             </div>
                             <div class="reviews-card__bottom">
-                                <span class="review-card__name">
+                                <span class="review-card__name" itemprop="author">
                                     Николай
                                 </span>
-                                <time class="review-card__date" datetime="2022-05-23">
-                                    27.05.2020
-                                </time>
-                            </div>
-                        </article>
-                    </li>
-
-                    <li class="reviews__item swiper-slide">
-                        <article class="reviews-card">
-                            <div class="reviews-card__content">
-                                <div class="rating reviews-card__rating" aria-label="Рейтинг 4 из 5">
-                                    <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
-                                    <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
-                                    <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
-                                    <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
-                                </div>
-                                <h3 class="reviews-card__title subtitle">
-                                    Качественно стирает
-                                </h3>
-                                <div class="reviews-card__text">
-                                    <p>
-                                        Тихо работает. Качественно стирает. Много режимов в том числе есть которого нет отдельно в LG: Слив. Инверторный двигатель.
-                                    </p>
-
-                                </div>
-                            </div>
-                            <div class="reviews-card__bottom">
-                                <span class="review-card__name">
-                                    Николай
-                                </span>
-                                <time class="review-card__date" datetime="2022-05-23">
+                                <time class="review-card__date" datetime="2022-05-23" itemprop="datePublished">
                                     27.05.2020
                                 </time>
                             </div>

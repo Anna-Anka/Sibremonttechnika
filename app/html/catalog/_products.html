@@ -18,8 +18,8 @@
             </span>
         </button>
     </div>
-    <ul class="products__items">
-        <li class="products__item">
+    <ul class="products__items" itemscope itemtype="http://schema.org/ItemList">
+        <li class="products__item" itemprop="itemListElement">
             @include('../components/_product-card.html', {
             "img" : "1",
             "alt" : "Шланг наливной",
@@ -29,7 +29,7 @@
             })
         </li>
 
-        <li class="products__item">
+        <li class="products__item" itemprop="itemListElement">
             @include('../components/_product-card.html', {
             "img" : "2",
             "alt" : "Верхний распылитель",
@@ -39,7 +39,7 @@
             })
         </li>
 
-        <li class="products__item">
+        <li class="products__item" itemprop="itemListElement">
             @include('../components/_product-card.html', {
             "img" : "3",
             "alt" : "Импеллер (разбрызгиватель)",
@@ -49,7 +49,7 @@
             })
         </li>
 
-        <li class="products__item">
+        <li class="products__item" itemprop="itemListElement">
             @include('../components/_product-card.html', {
             "img" : "4",
             "alt" : "Прокладка заливного шланга",
@@ -59,7 +59,7 @@
             })
         </li>
 
-        <li class="products__item">
+        <li class="products__item" itemprop="itemListElement">
             @include('../components/_product-card.html', {
             "img" : "5",
             "alt" : "Шланг заливной",
@@ -69,7 +69,7 @@
             })
         </li>
 
-        <li class="products__item">
+        <li class="products__item" itemprop="itemListElement">
             @include('../components/_product-card.html', {
             "img" : "3",
             "alt" : "Импеллер (разбрызгиватель)",

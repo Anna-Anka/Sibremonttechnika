@@ -33,13 +33,16 @@
             <li class="breadcrums__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                 <a class="breadcrums__link" href="#" itemprop="item">
                     <span itemprop="name">Главная</span>
-                    <meta itemprop="position" content="0">
                 </a>
+                <meta itemprop="position" content="0">
             </li>
-            <li class="breadcrums__item">
-                <span class="breadcrums__link">
-                    Ремонт холодильников
-                </span>
+            <li class="breadcrums__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a class="breadcrums__link" itemprop="item">
+                    <span itemprop="name">
+                        Ремонт холодильников
+                    </span>
+                </a>
+                <meta itemprop="position" content="1">
             </li>
         </ul>
     </div>
@@ -48,8 +51,8 @@
 <main class="main">
     <div class="container">
         <div class="service-box">
-            <div class="service-wrapper">
-                <h1 class="service-title">
+            <div class="service-wrapper" itemscope itemtype="http://schema.org/Product">
+                <h1 class="service-title" itemprop="name">
                     ремонт Холодильников
                 </h1>
                 @include("./service/_service-about.html")

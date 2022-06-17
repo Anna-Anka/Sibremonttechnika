@@ -9,8 +9,8 @@
 
         <div class="products-watch__wrapper">
             <div class="products-watch__swiper swiper">
-                <ul class="products-watch__items swiper-wrapper">
-                    <li class="products-watch__item swiper-slide">
+                <ul class="products-watch__items swiper-wrapper" itemscope itemtype="http://schema.org/ItemList">
+                    <li class="products-watch__item swiper-slide" itemprop="itemListElement">
                         @include('../components/_product-card.html', {
                         "img" : "1",
                         "alt" : "Шланг наливной",
@@ -19,7 +19,7 @@
                         "rating" : "5",
                         })
                     </li>
-                    <li class="products-watch__item swiper-slide">
+                    <li class="products-watch__item swiper-slide" itemprop="itemListElement">
                         @include('../components/_product-card.html', {
                         "img" : "2",
                         "alt" : "Верхний распылитель",
@@ -28,7 +28,7 @@
                         "rating" : "4",
                         })
                     </li>
-                    <li class="products-watch__item swiper-slide">
+                    <li class="products-watch__item swiper-slide" itemprop="itemListElement">
                         @include('../components/_product-card.html', {
                         "img" : "3",
                         "alt" : "Импеллер (разбрызгиватель)",
@@ -37,7 +37,7 @@
                         "rating" : "5",
                         })
                     </li>
-                    <li class="products-watch__item swiper-slide">
+                    <li class="products-watch__item swiper-slide" itemprop="itemListElement">
                         @include('../components/_product-card.html', {
                         "img" : "4",
                         "alt" : "Прокладка заливного шланга",
@@ -46,7 +46,7 @@
                         "rating" : "5",
                         })
                     </li>
-                    <li class="products-watch__item swiper-slide">
+                    <li class="products-watch__item swiper-slide" itemprop="itemListElement">
                         @include('../components/_product-card.html', {
                         "img" : "1",
                         "alt" : "Шланг наливной",
