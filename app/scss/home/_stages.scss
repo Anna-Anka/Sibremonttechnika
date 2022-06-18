@@ -50,7 +50,7 @@
         color: $white;
         font-weight: $fw-500;
         font-family: $oswald;
-        background-image: url('../img/icons/setting.svg');
+        background-image: url('../img/icons/setting-blue.svg');
         @include background;
         @include adaptiv-value("font-size", 22, 19, 0);
     }

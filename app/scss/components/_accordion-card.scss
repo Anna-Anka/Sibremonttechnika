@@ -23,7 +23,7 @@
 
         .accordion-card__button {
             &::after {
-                background-color: $white;
+                filter: invert(100%) sepia(7%) saturate(28%) hue-rotate(326deg) brightness(108%) contrast(107%);
             }
 
             &::before {

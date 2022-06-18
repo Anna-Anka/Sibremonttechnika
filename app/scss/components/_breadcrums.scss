@@ -27,13 +27,11 @@
                     right: 0;
                     width: 20px;
                     height: 20px;
-                    background-color: $blue-400;
                     transform: translateY(-50%);
                     content: "";
-                    mask-repeat: no-repeat;
-                    mask-size: contain;
-                    mask-position: center;
-                    mask-image: url('../img/icons/arrow-right.svg');
+                    @include background;
+                    filter: invert(41%) sepia(86%) saturate(747%) hue-rotate(173deg) brightness(92%) contrast(94%);
+                    background-image: url('../img/icons/arrow-right.svg');
                 }
             }
         }

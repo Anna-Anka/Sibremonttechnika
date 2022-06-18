@@ -66,7 +66,7 @@
         justify-content: space-between;
         margin-top: auto;
 
-        @include mq('phone-2') {
+        @include mq('phone') {
             flex-direction: column;
             align-items: flex-start;
         }
@@ -75,7 +75,7 @@
     &__title {
         margin-right: 10px;
 
-        @include mq('phone-2') {
+        @include mq('phone') {
             margin-right: 0;
             margin-bottom: 10px;
         }
@@ -94,12 +94,10 @@
             right: 0;
             width: 26px;
             height: 26px;
-            background-color: $blue-400;
+            background-image: url('../img/icons/arrow-right.svg');
+            filter: invert(64%) sepia(68%) saturate(2455%) hue-rotate(188deg) brightness(98%) contrast(77%);
             content: "";
-            mask-image: url('../img/icons/arrow-right.svg');
-            mask-repeat: no-repeat;
-            mask-size: contain;
-            mask-position: center;
+            @include background;
         }
     }
 }

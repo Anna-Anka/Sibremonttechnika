@@ -175,8 +175,7 @@ body {
     height: 24px;
     background-color: transparent;
     background-image: url('../img/icons/setting.svg');
-    transition: opacity 0.3s,
-        box-shadow 0.3s;
+    transition: opacity 0.3s, box-shadow 0.3s;
     @include background;
 
     &:not(:last-child) {
@@ -219,12 +218,10 @@ body {
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: $gray-600;
-        transition: background-color 0.3s, transform 0.5s;
-        mask-image: url('../img/icons/setting.svg');
-        mask-repeat: no-repeat;
-        mask-size: contain;
-        mask-position: center;
+        background-image: url('../img/icons/setting.svg');
+        filter: invert(45%) sepia(7%) saturate(270%) hue-rotate(163deg) brightness(89%) contrast(81%);
+        transition: transform 0.5s;
+        @include background;
     }
 
     &::before {
