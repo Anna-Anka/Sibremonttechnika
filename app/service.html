@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!--Favicon-->
+    
     <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
@@ -45,7 +44,7 @@
                         </label>
                         <input class="search-form__field form__field" type="search" name="search" id="search" placeholder="Поиск по товарам" required>
                     </div>
-                    <button class="search-form__button button" type="submit">
+                    <button class="search-form__button" type="submit">
                         <span class="sr-only">
                             Найти
                         </span>
@@ -464,32 +463,30 @@
     </ul>
 </section>
             </div>
-             
-    <section class="service-form" id="aside1">
-        <h2 class="service-form__title">
-            заказать услугу
-        </h2>
-        <form class="form" action="#">
-            <div class="form__items">
-                <div class="form__item form__item--service">
-                    <label class="sr-only" for="service-form__name">
-                        Введите ваше имя
-                    </label>
-                    <input class="form__field" id="service-form__name" name="name" type="text" placeholder="Ваше имя" required>
-                </div>
-                <div class="form__item form__item--service">
-                    <label class="sr-only" for="service-form__tel">
-                        Введите ваше имя
-                    </label>
-                    <input class="form__field" id="service-form__tel" name="tel" type="tel" placeholder="Ваш номер телефона" required>
-                </div>
+             <section class="service-form" id="aside1">
+    <h2 class="service-form__title">
+        заказать услугу
+    </h2>
+    <form class="form" action="#">
+        <div class="form__items">
+            <div class="form__item form__item--service">
+                <label class="sr-only" for="service-form__name">
+                    Введите ваше имя
+                </label>
+                <input class="form__field" id="service-form__name" name="name" type="text" placeholder="Ваше имя" required>
             </div>
-            <button class="form__button form__button--service button" type="submit">
-                Заказать услугу
-            </button>
-        </form>
-    </section>
-
+            <div class="form__item form__item--service">
+                <label class="sr-only" for="service-form__tel">
+                    Введите ваше имя
+                </label>
+                <input class="form__field" id="service-form__tel" name="tel" type="tel" placeholder="Ваш номер телефона" required>
+            </div>
+        </div>
+        <button class="form__button form__button--service button" type="submit">
+            Заказать услугу
+        </button>
+    </form>
+</section>
         </div>
     </div>
 </main>

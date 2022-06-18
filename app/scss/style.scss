@@ -6,8 +6,8 @@
 @import 'libs';
 @import 'global';
 
-//Components
 @import 'components/header';
+@import 'components/forms';
 @import 'components/footer';
 @import 'components/modal';
 @import 'components/reviews';
@@ -19,7 +19,6 @@
 @import 'components/accordion-card';
 @import 'components/characteristic-card';
 
-//Home
 @import 'home/offer';
 @import 'home/services';
 @import 'home/advantages';
@@ -27,16 +26,12 @@
 @import 'home/logos';
 @import 'home/contacts';
 
-//Catalog
 @import 'catalog/catalog';
 @import 'catalog/filters';
 @import 'catalog/products';
 
-//Search
 @import 'search/search';
 
-//Product 
 @import 'product/product';
 
-//Услуга 
 @import 'service/service';

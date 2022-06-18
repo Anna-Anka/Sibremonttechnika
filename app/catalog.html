@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--Favicon-->
     <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
@@ -45,7 +44,7 @@
                         </label>
                         <input class="search-form__field form__field" type="search" name="search" id="search" placeholder="Поиск по товарам" required>
                     </div>
-                    <button class="search-form__button button" type="submit">
+                    <button class="search-form__button" type="submit">
                         <span class="sr-only">
                             Найти
                         </span>
@@ -335,157 +334,165 @@
     <h2 class="sr-only">
         Фильтры
     </h2>
-    <div class="filters__item">
-        <div class="filters__top">
-            <h3 class="filters__subtitle subtitle">
-                Категории
-            </h3>
-            <button class="filters__button button-hide" type="button">
-                <span class="sr-only">
-                    Свернуть фильтр
-                </span>
-            </button>
-        </div>
-        <ul class="filters-categories filters__content">
-            <li class="filters-categories__item">
-                <a class="filters-categories__link" href="#">
-                    Стиральные машины
-                </a>
-            </li>
-            <li class="filters-categories__item">
-                <a class="filters-categories__link" href="#">
-                    Посудомоечные машины
-                </a>
-            </li>
-            <li class="filters-categories__item">
-                <a class="filters-categories__link" href="#">
-                    Холодильники
-                </a>
-            </li>
-            <li class="filters-categories__item">
-                <a class="filters-categories__link" href="#">
-                    Морозильные камеры
-                </a>
-            </li>
-            <li class="filters-categories__item">
-                <a class="filters-categories__link" href="#">
-                    Микроволновые печи
-                </a>
-            </li>
-            <li class="filters-categories__item">
-                <a class="filters-categories__link" href="#">
-                    Мультиварки
-                </a>
-            </li>
-        </ul>
-    </div>
 
-    <div class="filters__item filters__item--price">
-        <div class="filters__top">
-            <h3 class="filters__subtitle subtitle">
-                Цена 
-            </h3>
-            <button class="filters__button button-hide" type="button">
-                <span class="sr-only">
-                    Свернуть фильтр
-                </span>
-            </button>
-        </div>
-        <form class="filters-price filters__content" action="#">
-            <div class="filters-price__items">
-                <div class="filters-price__item">
-                    <label class="filters-price__label" for="filters-price__from">
-                        От
-                    </label>
-                    <input class="filters-price__field filters-price__field--from" id="filters-price__from" placeholder="500" type="number" min="500" max="100000" name="price-from">
-                </div>
-                <div class="filters-price__item">
-                    <label class="filters-price__label" for="filters-price__to">
-                        До
-                    </label>
-                    <input class="filters-price__field filters-price__field--to" id="filters-price__to" placeholder="1000" type="number" max="100000" name="price-to">
-                </div>
-                <span class="filters-price__currency">
-                    ₽
-                </span>
+    <div class="filters__box">
+        <button class="filters__close" type="button">
+            <span class="sr-only">
+                Закрыть фильтры
+            </span>
+        </button>
+        <div class="filters__item">
+            <div class="filters__top">
+                <h3 class="filters__subtitle subtitle">
+                    Категории
+                </h3>
+                <button class="filters__button button-hide" type="button">
+                    <span class="sr-only">
+                        Свернуть фильтр
+                    </span>
+                </button>
             </div>
-            <div class="filters-price__slider"></div>
-        </form>
-    </div>
-
-    <div class="filters__item">
-        <div class="filters__top">
-            <h3 class="filters__subtitle subtitle">
-                Производитель
-            </h3>
-            <button class="filters__button button-hide" type="button">
-                <span class="sr-only">
-                    Свернуть фильтр
-                </span>
-            </button>
+            <ul class="filters-categories filters__content">
+                <li class="filters-categories__item">
+                    <a class="filters-categories__link" href="#">
+                        Стиральные машины
+                    </a>
+                </li>
+                <li class="filters-categories__item">
+                    <a class="filters-categories__link" href="#">
+                        Посудомоечные машины
+                    </a>
+                </li>
+                <li class="filters-categories__item">
+                    <a class="filters-categories__link" href="#">
+                        Холодильники
+                    </a>
+                </li>
+                <li class="filters-categories__item">
+                    <a class="filters-categories__link" href="#">
+                        Морозильные камеры
+                    </a>
+                </li>
+                <li class="filters-categories__item">
+                    <a class="filters-categories__link" href="#">
+                        Микроволновые печи
+                    </a>
+                </li>
+                <li class="filters-categories__item">
+                    <a class="filters-categories__link" href="#">
+                        Мультиварки
+                    </a>
+                </li>
+            </ul>
         </div>
-        <div class="filters__content">
-            <form class="filters-form" action="#">
+
+        <div class="filters__item filters__item--price">
+            <div class="filters__top">
+                <h3 class="filters__subtitle subtitle">
+                    Цена
+                </h3>
+                <button class="filters__button button-hide" type="button">
+                    <span class="sr-only">
+                        Свернуть фильтр
+                    </span>
+                </button>
+            </div>
+            <form class="filters-price filters__content" action="#">
+                <div class="filters-price__items">
+                    <div class="filters-price__item">
+                        <label class="filters-price__label" for="filters-price__from">
+                            От
+                        </label>
+                        <input class="filters-price__field filters-price__field--from" id="filters-price__from" placeholder="500" type="number" min="500" max="100000" name="price-from">
+                    </div>
+                    <div class="filters-price__item">
+                        <label class="filters-price__label" for="filters-price__to">
+                            До
+                        </label>
+                        <input class="filters-price__field filters-price__field--to" id="filters-price__to" placeholder="1000" type="number" max="100000" name="price-to">
+                    </div>
+                    <span class="filters-price__currency">
+                        ₽
+                    </span>
+                </div>
+                <div class="filters-price__slider"></div>
+            </form>
+        </div>
+
+        <div class="filters__item">
+            <div class="filters__top">
+                <h3 class="filters__subtitle subtitle">
+                    Производитель
+                </h3>
+                <button class="filters__button button-hide" type="button">
+                    <span class="sr-only">
+                        Свернуть фильтр
+                    </span>
+                </button>
+            </div>
+            <div class="filters__content">
+                <form class="filters-form" action="#">
+                    <label class="filters-form__item">
+                        Thomas
+                        <input class="filters-form__unvisible" type="checkbox" name="manufacturer">
+                        <span class="filters-form__visible filters-form__visible--check"></span>
+                    </label>
+                    <label class="filters-form__item">
+                        Karcher
+                        <input class="filters-form__unvisible" type="checkbox" name="manufacturer">
+                        <span class="filters-form__visible filters-form__visible--check"></span>
+                    </label>
+                    <label class="filters-form__item">
+                        Hansa
+                        <input class="filters-form__unvisible" type="checkbox" name="manufacturer">
+                        <span class="filters-form__visible filters-form__visible--check"></span>
+                    </label>
+                    <label class="filters-form__item">
+                        Rowenta
+                        <input class="filters-form__unvisible" type="checkbox" name="manufacturer">
+                        <span class="filters-form__visible filters-form__visible--check"></span>
+                    </label>
+                </form>
+                <button class="filters__more" type="button">
+                    Показать ещё
+                </button>
+            </div>
+        </div>
+
+        <div class="filters__item">
+            <div class="filters__top">
+                <h3 class="filters__subtitle subtitle">
+                    Доставка
+                </h3>
+                <button class="filters__button button-hide" type="button">
+                    <span class="sr-only">
+                        Свернуть фильтр
+                    </span>
+                </button>
+            </div>
+            <form class="filters-form filters__content" action="#">
                 <label class="filters-form__item">
-                    Thomas
-                    <input class="filters-form__unvisible" type="checkbox" name="manufacturer">
-                    <span class="filters-form__visible filters-form__visible--check"></span>
+                    Сегодня
+                    <input class="filters-form__unvisible" type="radio" name="delivery">
+                    <span class="filters-form__visible filters-form__visible--radio"></span>
                 </label>
                 <label class="filters-form__item">
-                    Karcher
-                    <input class="filters-form__unvisible" type="checkbox" name="manufacturer">
-                    <span class="filters-form__visible filters-form__visible--check"></span>
+                    Завтра
+                    <input class="filters-form__unvisible" type="radio" name="delivery">
+                    <span class="filters-form__visible filters-form__visible--radio"></span>
                 </label>
                 <label class="filters-form__item">
-                    Hansa
-                    <input class="filters-form__unvisible" type="checkbox" name="manufacturer">
-                    <span class="filters-form__visible filters-form__visible--check"></span>
-                </label>
-                <label class="filters-form__item">
-                    Rowenta
-                    <input class="filters-form__unvisible" type="checkbox" name="manufacturer">
-                    <span class="filters-form__visible filters-form__visible--check"></span>
+                    Без разницы
+                    <input class="filters-form__unvisible" type="radio" name="delivery">
+                    <span class="filters-form__visible filters-form__visible--radio"></span>
                 </label>
             </form>
-            <button class="filters__more" type="button">
-                Показать ещё
-            </button>
         </div>
-    </div>
 
-    <div class="filters__item">
-        <div class="filters__top">
-            <h3 class="filters__subtitle subtitle">
-                Доставка
-            </h3>
-            <button class="filters__button button-hide" type="button">
-                <span class="sr-only">
-                    Свернуть фильтр
-                </span>
-            </button>
-        </div>
-        <form class="filters-form filters__content" action="#">
-            <label class="filters-form__item">
-                Сегодня
-                <input class="filters-form__unvisible" type="radio" name="delivery">
-                <span class="filters-form__visible filters-form__visible--radio"></span>
-            </label>
-            <label class="filters-form__item">
-                Завтра
-                <input class="filters-form__unvisible" type="radio" name="delivery">
-                <span class="filters-form__visible filters-form__visible--radio"></span>
-            </label>
-            <label class="filters-form__item">
-                Без разницы
-                <input class="filters-form__unvisible" type="radio" name="delivery">
-                <span class="filters-form__visible filters-form__visible--radio"></span>
-            </label>
-        </form>
+        <button class="filters__result button" type="button">
+            Применить
+        </button>
     </div>
-
-    <button class="filters__result button" type="button">
-        Применить
-    </button>
 
 </section>
                 <div class="catalog__wrapper">

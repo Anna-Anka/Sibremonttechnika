@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    //Вызов модального окна
     const btnModal = document.querySelectorAll('.btn-modal');
     btnModal.forEach(item => {
         item.addEventListener('click', () => {
@@ -23,7 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    //Вызов каталога
     const btnMenu = document.querySelector('.header__catalog');
     const menu = document.querySelector('.menu');
     const toggleMenu = function () {
@@ -48,61 +46,62 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    //Поиск 
-    const btnSearch = document.querySelector('.header__mobile--search');
-    const search_form = document.querySelector('.search-form');
-    const toggleform = function () {
-        search_form.classList.toggle('search-form--active');
-    }
+    if (document.querySelector('.header__mobile--search')) {
+        const btnSearch = document.querySelector('.header__mobile--search');
+        const search_form = document.querySelector('.search-form');
+        const toggleform = function () {
+            search_form.classList.toggle('search-form--active');
+        }
 
-    btnSearch.addEventListener('click', function (e) {
-        e.stopPropagation();
-        toggleform();
-    });
-
-    document.addEventListener('click', function (e) {
-        const target = e.target;
-        const its_search_form = target == search_form || search_form.contains(target);
-        const its_btnSearch = target == btnSearch;
-        const menu_is_active = search_form.classList.contains('search-form--active');
-
-        if (!its_search_form && !its_btnSearch && menu_is_active) {
+        btnSearch.addEventListener('click', function (e) {
+            e.stopPropagation();
             toggleform();
-        }
-    });
+        });
 
-    //Звонок 
-    const btnCall = document.querySelector('.header__mobile--call');
-    const call = document.querySelector('.header__call');
-    const toggleCall = function () {
-        call.classList.toggle('header__call--active');
+        document.addEventListener('click', function (e) {
+            const target = e.target;
+            const its_search_form = target == search_form || search_form.contains(target);
+            const its_btnSearch = target == btnSearch;
+            const menu_is_active = search_form.classList.contains('search-form--active');
+
+            if (!its_search_form && !its_btnSearch && menu_is_active) {
+                toggleform();
+            }
+        });
     }
 
-    btnCall.addEventListener('click', function (e) {
-        e.stopPropagation();
-        toggleCall();
-    });
-
-    document.addEventListener('click', function (e) {
-        const target = e.target;
-        const its_call = target == call || call.contains(target);
-        const its_btnCall = target == btnCall;
-        const menu_is_active = call.classList.contains('header__call--active');
-
-        if (!its_call && !its_btnCall && menu_is_active) {
-            toggleCall();
+    if (document.querySelector('.header__mobile--call')) {
+        const btnCall = document.querySelector('.header__mobile--call');
+        const call = document.querySelector('.header__call');
+        const toggleCall = function () {
+            call.classList.toggle('header__call--active');
         }
-    });
 
-    document.querySelector('.header__mobile--search').onclick = function () {
-        document.querySelector('.header__call--active').classList.remove('header__call--active')
+        btnCall.addEventListener('click', function (e) {
+            e.stopPropagation();
+            toggleCall();
+        });
+
+        document.addEventListener('click', function (e) {
+            const target = e.target;
+            const its_call = target == call || call.contains(target);
+            const its_btnCall = target == btnCall;
+            const menu_is_active = call.classList.contains('header__call--active');
+
+            if (!its_call && !its_btnCall && menu_is_active) {
+                toggleCall();
+            }
+        });
     }
 
     document.querySelector('.header__mobile--call').onclick = function () {
-        document.querySelector('.search-form--active').classList.remove('search-form--active')
+        document.querySelector('.search-form').classList.remove('search-form--active')
     }
 
-    //Слайдер в отзывах
+    document.querySelector('.header__mobile--search').onclick = function () {
+        document.querySelector('.header__call').classList.remove('header__call--active')
+    }
+
     if (document.querySelector('.swiper-reviews')) {
         const sliderReviews = document.querySelector('.swiper-reviews');
         const swiperReviews = new Swiper(sliderReviews, {
@@ -138,7 +137,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    //Слайдер просмотренные товары
     if (document.querySelector('.products-watch__swiper')) {
         const sliderWatch = document.querySelector('.products-watch__swiper');
         const swiperWatch = new Swiper(sliderWatch, {
@@ -178,7 +176,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    //Слайдер на странице товара
     if (document.querySelector('.product__main')) {
         const sliderMain = document.querySelector('.product__main');
         const sliderNav = document.querySelector('.product__small');
@@ -215,16 +212,20 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     }
 
-    //Фильтры на мобильной версии
     if (document.querySelector('.products__button')) {
         document.querySelector('.products__button').onclick = function () {
             document.querySelector('.filters').classList.toggle('filters--active');
             document.querySelector('body').classList.toggle('lock');
             document.querySelector('.blackout').classList.toggle('blackout--active');
         };
+
+        document.querySelector('.filters__close').onclick = function () {
+            document.querySelector('.filters').classList.remove('filters--active');
+            document.querySelector('body').classList.remove('lock');
+            document.querySelector('.blackout').classList.remove('blackout--active');
+        }
     }
 
-    //Ответы на вопросы
     if (document.querySelectorAll('.accordion-card__top')) {
         const question = document.querySelectorAll('.accordion-card__top');
         question.forEach(item => {
@@ -241,7 +242,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     };
 
-    //Показать все на странице товара
     if (document.querySelector('.product__more--descr')) {
         document.querySelector('.product__more--descr').onclick = function () {
             this.classList.toggle('product__more--active');
@@ -254,7 +254,6 @@ document.addEventListener("DOMContentLoaded", () => {
         };
     }
 
-    //Свайпер в партнерах
     if (document.querySelector('.swiper-logos')) {
         const sliderLogos = document.querySelector('.swiper-logos');
         const swiperLogos = new Swiper(sliderLogos, {
@@ -306,7 +305,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    //Фильтр цены
     if (document.querySelector('.filters-price__slider')) {
         const Price = document.querySelector('.filters-price__slider');
 
@@ -345,14 +343,12 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    //Кнопка «Показать ещё»
     if (document.querySelector('.filters__more')) {
         document.querySelector('.filters__more').onclick = function () {
             this.classList.toggle('filters__more--active');
         };
     }
 
-    //Скрывать фильтры по клику на заголовок
     if (document.querySelectorAll('.filters__top')) {
         const filterTitle = document.querySelectorAll('.filters__top');
         filterTitle.forEach(item => {
@@ -362,7 +358,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    //Select
     if (document.querySelector('.products__list')) {
         const defaultSelect = () => {
             const element = document.querySelector('.products__list');
@@ -374,10 +369,10 @@ document.addEventListener("DOMContentLoaded", () => {
         defaultSelect();
     }
 
-    //Затемнение
     if (document.querySelector('.blackout')) {
         document.querySelector('.blackout').onclick = function () {
             document.querySelector('.filters').classList.remove('filters--active');
+            document.querySelector('body').classList.remove('lock');
             this.classList.remove('blackout--active');
         };
     }
