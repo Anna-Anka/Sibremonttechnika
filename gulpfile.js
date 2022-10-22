@@ -20,7 +20,12 @@ const cheerio = require('gulp-cheerio');
 const ttf2woff = require('gulp-ttf2woff');
 const ttf2woff2 = require('gulp-ttf2woff2');
 
-const gulp = require('gulp');
+const ghPages = require('gh-pages');
+const path = require('path');
+
+function deploy(cb) {
+    ghPages.publish(path.join(process.cwd(), 'dist'), cb);
+}
 
 function fonts() {
     src('app/fonts/**')
@@ -167,5 +172,6 @@ exports.images = images;
 exports.cleanDist = cleanDist;
 exports.build = build;
 exports.build = series(cleanDist, images, build, fonts)
+exports.deploy = deploy;
 
 exports.default = parallel(styles, svgSprites, htmlInclude, scripts, browsersync, watching, fonts)
