@@ -1,0 +1,49 @@
+<section class="services section">
+    <div class="container">
+        <h2 class="title">
+            <span class="title__accent">
+                Наши
+            </span>
+            Услуги
+        </h2>
+
+        <ul class="services__items" itemscope itemtype="http://schema.org/ItemList">
+            <li class="services__item" itemprop="itemListElement">
+                @include('./../components/_service-card.html', {
+                    'img' : 'washing-machine',
+                    'title' : 'Стиральные машины'
+                })
+            </li>
+            <li class="services__item" itemprop="itemListElement">
+                @include('./../components/_service-card.html', {
+                'img' : 'refrigerator',
+                'title' : 'Холодильники'
+                })
+            </li>
+            <li class="services__item" itemprop="itemListElement">
+                @include('./../components/_service-card.html', {
+                'img' : 'freezers',
+                'title' : 'Морозильные камеры'
+                })
+            </li>
+            <li class="services__item" itemprop="itemListElement">
+                @include('./../components/_service-card.html', {
+                'img' : 'microwave',
+                'title' : 'Микроволновые (свч) печи'
+                })
+            </li>
+            <li class="services__item" itemprop="itemListElement">
+                @include('./../components/_service-card.html', {
+                'img' : 'multicookers',
+                'title' : 'Мультиварки'
+                })
+            </li>
+            <li class="services__item" itemprop="itemListElement">
+                @include('./../components/_service-card.html', {
+                'img' : 'dishwashers',
+                'title' : 'Посудомоечные машины'
+                })
+            </li>
+        </ul>
+    </div>
+</section>

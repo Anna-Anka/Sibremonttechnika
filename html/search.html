@@ -1,0 +1,47 @@
+@include("./components/_head.html", {
+"title" : "Сибремонттехника — ремонт бытовой техники | Поиск"
+})
+
+@include("./components/_header.html", {
+"class" : "header header--line"
+})
+@include("./components/_modal.html")
+
+<div class="breadcrums breadcrums--gray">
+    <div class="container">
+        <ul class="breadcrums__items" itemtype="https://schema.org/BreadcrumbList" itemscope>
+            <li class="breadcrums__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a class="breadcrums__link" href="./index.html" itemprop="item">
+                    <span itemprop="name">Главная</span>
+                </a>
+                <meta itemprop="position" content="0">
+            </li>
+            <li class="breadcrums__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a class="breadcrums__link" itemprop="item">
+                    <span itemprop="name">
+                        Поиск
+                    </span>
+                </a>
+                <meta itemprop="position" content="1">
+            </li>
+        </ul>
+    </div>
+</div>
+
+<main class="main">
+    <div class="search-wrapper section">
+        <div class="container">
+            <h1 class="title title--big">
+                <span class="title__accent">
+                    Результаты
+                </span>
+                поиска
+            </h1>
+            @include("./search/_search.html")
+        </div>
+    </div>   
+</main>
+
+@include("./components/_products-watch.html")
+@include("./components/_footer.html")
+@include("./components/_bottom.html")

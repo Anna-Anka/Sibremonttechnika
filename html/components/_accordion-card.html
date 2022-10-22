@@ -1,0 +1,35 @@
+@if(context.background === "normal") {
+<article class="accordion-card @class">
+    <div class="accordion-card__top">
+        <h3 class="accordion-card__title subtitle">
+            @title
+        </h3>
+        <button class="accordion-card__button button-hide" type="button">
+            <span class="sr-only">
+                Посмотреть ответ
+            </span>
+        </button>
+    </div>
+    <div class="accordion-card__text">
+        @text
+    </div>
+</article>
+}
+
+@if(context.background === "white") {
+<article class="accordion-card accordion-card--white">
+    <div class="accordion-card__top">
+        <h3 class="accordion-card__title subtitle">
+            @title
+        </h3>
+        <button class="accordion-card__button button-hide" type="button">
+            <span class="sr-only">
+                Посмотреть ответ
+            </span>
+        </button>
+    </div>
+    <div class="accordion-card__text">
+        @text
+    </div>
+</article>
+}

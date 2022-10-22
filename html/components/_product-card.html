@@ -1,0 +1,80 @@
+<article class="product-card" itemtype="https://schema.org/Product" itemscope>
+    <div class="product-card__top">
+        <a class="product-card__image" href="./product.html" itemprop="url">
+            <img class="product-card__img" src="img/products/@img.png" alt="@alt" loading="lazy" width="256" height="200" itemprop="image">
+        </a>
+        <h3 class="product-card__title" itemprop="name">
+            <a class="product-card__link" href="./product.html" itemprop="url">
+                @title
+            </a>
+        </h3>
+        <div class="product-card__info">
+            <span class="product-card__price subtitle" itemtype="https://schema.org/Offer" itemprop="offers" itemscope>
+                <span itemprop="price">@price</span>
+                <span itemprop="priceCurrency">₽</span>
+            </span>
+            @if(context.rating === "5") {
+                <div class="product-card__rating rating" aria-label="Рейтинг 5 из 5" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                    <meta itemprop="ratingValue" content="5">
+                    <meta itemprop="bestRating" content="5">
+                    <meta itemprop="worstRating" content="1">
+                    <meta itemprop="reviewCount" content="11">
+                    <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
+                    <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
+                    <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
+                    <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
+                    <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
+                </div>
+            }
+
+            @if(context.rating === "4") {
+                <div class="product-card__rating rating" aria-label="Рейтинг 4 из 5" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                    <meta itemprop="ratingValue" content="4">
+                    <meta itemprop="bestRating" content="5">
+                    <meta itemprop="worstRating" content="1">
+                    <meta itemprop="reviewCount" content="11">
+                    <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
+                    <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
+                    <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
+                    <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
+                </div>
+            }
+
+            @if(context.rating === "3") {
+            <div class="product-card__rating rating" aria-label="Рейтинг 3 из 5" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                <meta itemprop="ratingValue" content="3">
+                <meta itemprop="bestRating" content="5">
+                <meta itemprop="worstRating" content="1">
+                <meta itemprop="reviewCount" content="11">
+                <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
+                <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
+                <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
+            </div>
+            }
+
+            @if(context.rating === "2") {
+            <div class="product-card__rating rating" aria-label="Рейтинг 2 из 5" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                <meta itemprop="ratingValue" content="2">
+                <meta itemprop="bestRating" content="5">
+                <meta itemprop="worstRating" content="1">
+                <meta itemprop="reviewCount" content="11">
+                <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
+                <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
+            </div>
+            }
+
+            @if(context.rating === "1") {
+            <div class="product-card__rating rating" aria-label="Рейтинг 1 из 5" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                <meta itemprop="ratingValue" content="1">
+                <meta itemprop="bestRating" content="5">
+                <meta itemprop="worstRating" content="1">
+                <meta itemprop="reviewCount" content="11">
+                <span class="rating__star" style="background-image: url('img/icons/star.svg')"></span>
+            </div>
+            }
+        </div>
+    </div>
+    <button class="product-card__btn button button--border btn-modal" type="button">
+        Заказать
+    </button>
+</article>

@@ -1,0 +1,68 @@
+<section class="products-watch section">
+    <div class="container">
+        <h2 class="title">
+            <span class="title__accent">
+                Просмотренные
+            </span>
+            товары
+        </h2>
+
+        <div class="products-watch__wrapper">
+            <div class="products-watch__swiper swiper">
+                <ul class="products-watch__items swiper-wrapper" itemscope itemtype="http://schema.org/ItemList">
+                    <li class="products-watch__item swiper-slide" itemprop="itemListElement">
+                        @include('../components/_product-card.html', {
+                        "img" : "1",
+                        "alt" : "Шланг наливной",
+                        "title" : "Шланг наливной для стиральной машины Equation 3 м",
+                        "price" : "950",
+                        "rating" : "5",
+                        })
+                    </li>
+                    <li class="products-watch__item swiper-slide" itemprop="itemListElement">
+                        @include('../components/_product-card.html', {
+                        "img" : "2",
+                        "alt" : "Верхний распылитель",
+                        "title" : "Верхний распылитель Beko 1746200100",
+                        "price" : "1950",
+                        "rating" : "4",
+                        })
+                    </li>
+                    <li class="products-watch__item swiper-slide" itemprop="itemListElement">
+                        @include('../components/_product-card.html', {
+                        "img" : "3",
+                        "alt" : "Импеллер (разбрызгиватель)",
+                        "title" : "Импеллер (разбрызгиватель) нижний Beko 1744400200",
+                        "price" : "5950",
+                        "rating" : "5",
+                        })
+                    </li>
+                    <li class="products-watch__item swiper-slide" itemprop="itemListElement">
+                        @include('../components/_product-card.html', {
+                        "img" : "4",
+                        "alt" : "Прокладка заливного шланга",
+                        "title" : "Прокладка заливного шланга 3/4, +(сетка-фильтр), зам. 005781",
+                        "price" : "5950",
+                        "rating" : "5",
+                        })
+                    </li>
+                    <li class="products-watch__item swiper-slide" itemprop="itemListElement">
+                        @include('../components/_product-card.html', {
+                        "img" : "1",
+                        "alt" : "Шланг наливной",
+                        "title" : "Шланг наливной для стиральной машины Equation 3 м",
+                        "price" : "950",
+                        "rating" : "5",
+                        })
+                    </li>
+                </ul>
+
+                <div class="products-watch__pagination swiper-pagination"></div>
+                <button class="products-watch__button products-watch__button--prev swiper-button-next" type="button">
+                </button>
+                <button class="products-watch__button products-watch__button--next swiper-button-prev" type="button">
+                </button>
+            </div>
+        </div>
+    </div>
+</section>

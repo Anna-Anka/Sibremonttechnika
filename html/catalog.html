@@ -1,0 +1,51 @@
+@include("./components/_head.html", {
+"title" : "Сибремонттехника — ремонт бытовой техники | Каталог товаров"
+})
+
+@include("./components/_header.html", {
+"class" : "header header--line"
+})
+@include("./components/_modal.html")
+<div class="blackout"></div>
+
+<div class="breadcrums breadcrums--gray">
+    <div class="container">
+        <ul class="breadcrums__items" itemtype="https://schema.org/BreadcrumbList" itemscope>
+            <li class="breadcrums__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a class="breadcrums__link" href="./index.html" itemprop="item">
+                    <span itemprop="name">Главная</span>
+                </a>
+                <meta itemprop="position" content="0">
+            </li>
+            <li class="breadcrums__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a class="breadcrums__link" itemprop="item">
+                    <span itemprop="name">Каталог</span>
+                </a>
+                <meta itemprop="position" content="1">
+            </li>
+        </ul>
+    </div>
+</div>
+
+<main class="main">
+    <div class="catalog">
+        <div class="container">
+            <h1 class="title title--big">
+                <span class="title__accent">
+                    Каталог
+                </span>
+                товаров
+            </h1>
+            <div class="catalog__box">
+                @include("./catalog/_filters.html")
+                <div class="catalog__wrapper">
+                    @include("./catalog/_products.html")
+                    @include("./components/_pagination.html")
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+@include("./components/_footer.html")
+@include("./components/_bottom.html")
