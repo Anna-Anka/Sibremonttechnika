@@ -5,11 +5,25 @@
 <p></p>
 
 <b>Страницы:</b>
-<a target="_blank" href="https://anna-anka.github.io/Sibremonttechnika/">Главная</a>
-<a target="_blank" href="https://anna-anka.github.io/Sibremonttechnika/catalog.html">Каталог</a>
-<a target="_blank" href="https://anna-anka.github.io/Sibremonttechnika/product.html">Страница товара</a>
-<a target="_blank" href="https://anna-anka.github.io/Sibremonttechnika/search.html">Страница поиска</a>
-<a target="_blank" href="https://anna-anka.github.io/Sibremonttechnika/service.html">Страница услуги</a>
+<ul>
+  <li>
+    <a target="_blank" href="https://anna-anka.github.io/Sibremonttechnika/">Главная</a>
+  </li>
+  <li>
+    <a target="_blank" href="https://anna-anka.github.io/Sibremonttechnika/catalog.html">Каталог</a>
+  </li>
+  <li>
+    <a target="_blank" href="https://anna-anka.github.io/Sibremonttechnika/product.html">Страница товара</a>
+  </li>
+  <li>
+    <a target="_blank" href="https://anna-anka.github.io/Sibremonttechnika/search.html">Страница поиска</a>
+  </li>
+  <li>
+    <a target="_blank" href="https://anna-anka.github.io/Sibremonttechnika/service.html">Страница услуги</a>
+  </li>
+</ul>
+
+<p></p>
 
 <b>Используемые технологии: </b>
 1) Сборщик Gulp
