@@ -9,124 +9,40 @@
 
         <ul class="services__items" itemscope itemtype="http://schema.org/ItemList">
             <li class="services__item" itemprop="itemListElement">
-                <article class="service-card" itemscope itemtype="http://schema.org/Product">
-                    <a class="service-card__link" href="#" itemprop="url">
-                        <img class="service-card__img" src="img/services/washing-machine.png" alt="Стиральные машины" width="358" height="315" loading="lazy" itemprop="image">
-                    </a>
-                    <div class="service-card__info">
-                        <h3 class="service-card__title subtitle" itemprop="name">
-                            Стиральные машины
-                        </h3>
-                        <a class="service-card__more" href="#" itemprop="url">
-                            Подробнее
-                        </a>
-                    </div>
-                    <div itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer">
-                        <meta itemprop="priceCurrency" content="RUB">
-                        <meta itemprop="lowPrice" content="600">
-                        <link itemprop="availability" href="http://schema.org/InStock">
-                    </div>
-                </article>
+                @include('./../components/_service-card.html', {
+                    'img' : 'washing-machine',
+                    'title' : 'Стиральные машины'
+                })
             </li>
             <li class="services__item" itemprop="itemListElement">
-                <article class="service-card" itemscope itemtype="http://schema.org/Product">
-                    <a class="service-card__link" href="#" itemprop="url">
-                        <img class="service-card__img" src="img/services/refrigerator.png" alt="Холодильники" width="358" height="315" loading="lazy" itemprop="image">
-                    </a>
-                    <div class="service-card__info">
-                        <h3 class="service-card__title subtitle" itemprop="name">
-                            Холодильники
-                        </h3>
-                        <a class="service-card__more" href="#" itemprop="url">
-                            Подробнее
-                        </a>
-                    </div>
-                    <div itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer">
-                        <meta itemprop="priceCurrency" content="RUB">
-                        <meta itemprop="lowPrice" content="600">
-                        <link itemprop="availability" href="http://schema.org/InStock">
-                    </div>
-                </article>
+                @include('./../components/_service-card.html', {
+                'img' : 'refrigerator',
+                'title' : 'Холодильники'
+                })
             </li>
             <li class="services__item" itemprop="itemListElement">
-                <article class="service-card" itemscope itemtype="http://schema.org/Product">
-                    <a class="service-card__link" href="#" itemprop="url">
-                        <img class="service-card__img" src="img/services/freezers.png" alt="Морозильные камеры" width="358" height="315" loading="lazy" itemprop="image">
-                    </a>
-                    <div class="service-card__info">
-                        <h3 class="service-card__title subtitle" itemprop="name">
-                            Морозильные камеры
-                        </h3>
-                        <a class="service-card__more" href="#" itemprop="url">
-                            Подробнее
-                        </a>
-                    </div>
-                    <div itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer">
-                        <meta itemprop="priceCurrency" content="RUB">
-                        <meta itemprop="lowPrice" content="600">
-                        <link itemprop="availability" href="http://schema.org/InStock">
-                    </div>
-                </article>
+                @include('./../components/_service-card.html', {
+                'img' : 'freezers',
+                'title' : 'Морозильные камеры'
+                })
             </li>
             <li class="services__item" itemprop="itemListElement">
-                <article class="service-card" itemscope itemtype="http://schema.org/Product">
-                    <a class="service-card__link" href="#" itemprop="url">
-                        <img class="service-card__img" src="img/services/microwave.png" alt="Микроволновые (свч) печи" width="358" height="315" loading="lazy" itemprop="image">
-                    </a>
-                    <div class="service-card__info">
-                        <h3 class="service-card__title subtitle" itemprop="name">
-                            Микроволновые (свч) печи
-                        </h3>
-                        <a class="service-card__more" href="#" itemprop="url">
-                            Подробнее
-                        </a>
-                    </div>
-                    <div itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer">
-                        <meta itemprop="priceCurrency" content="RUB">
-                        <meta itemprop="lowPrice" content="600">
-                        <link itemprop="availability" href="http://schema.org/InStock">
-                    </div>
-                </article>
+                @include('./../components/_service-card.html', {
+                'img' : 'microwave',
+                'title' : 'Микроволновые (свч) печи'
+                })
             </li>
             <li class="services__item" itemprop="itemListElement">
-                <article class="service-card" itemscope itemtype="http://schema.org/Product">
-                    <a class="service-card__link" href="#" itemprop="url">
-                        <img class="service-card__img" src="img/services/multicookers.png" alt="Мультиварки" width="358" height="315" loading="lazy" itemprop="image">
-                    </a>
-                    <div class="service-card__info">
-                        <h3 class="service-card__title subtitle" itemprop="name">
-                            Мультиварки
-                        </h3>
-                        <a class="service-card__more" href="#" itemprop="url">
-                            Подробнее
-                        </a>
-                    </div>
-                    <div itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer">
-                        <meta itemprop="priceCurrency" content="RUB">
-                        <meta itemprop="lowPrice" content="600">
-                        <link itemprop="availability" href="http://schema.org/InStock">
-                    </div>
-                </article>
+                @include('./../components/_service-card.html', {
+                'img' : 'multicookers',
+                'title' : 'Мультиварки'
+                })
             </li>
             <li class="services__item" itemprop="itemListElement">
-                <article class="service-card" itemscope itemtype="http://schema.org/Product">
-                    <a class="service-card__link" href="#" itemprop="url">
-                        <img class="service-card__img" src="img/services/dishwashers.png" alt="посудомоечные машины" width="358" height="315" loading="lazy" itemprop="image">
-                    </a>
-                    <div class="service-card__info">
-                        <h3 class="service-card__title subtitle" itemprop="name">
-                            посудомоечные машины
-                        </h3>
-                        <a class="service-card__more" href="#" itemprop="url">
-                            Подробнее
-                        </a>
-                    </div>
-                    <div itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer">
-                        <meta itemprop="priceCurrency" content="RUB">
-                        <meta itemprop="lowPrice" content="600">
-                        <link itemprop="availability" href="http://schema.org/InStock">
-                    </div>
-                </article>
+                @include('./../components/_service-card.html', {
+                'img' : 'dishwashers',
+                'title' : 'Посудомоечные машины'
+                })
             </li>
         </ul>
     </div>

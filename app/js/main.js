@@ -235,7 +235,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
             item.addEventListener('mousedown', (e) => {
                 if (!item.contains(e.target)) {
-                    alert('dada');
                     item.parentNode.classList.remove('accordion-card--active');
                 }
             });
